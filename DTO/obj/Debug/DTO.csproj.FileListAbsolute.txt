@@ -1,0 +1,30 @@
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\DTO\bin\Debug\DTO.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\DTO\bin\Debug\DTO.pdb
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\DTO\obj\Debug\DTO.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\DTO\obj\Debug\DTO.pdb
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\DTO\bin\Debug\DTO.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\DTO\bin\Debug\DTO.pdb
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\DTO\obj\Debug\DTO.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\DTO\obj\Debug\DTO.pdb
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\DTO\bin\Debug\DTO.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\DTO\bin\Debug\DTO.pdb
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\DTO\obj\Debug\DTO.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\DTO\obj\Debug\DTO.pdb
+E:\פרויקט\ServerSideApplication\DTO\bin\Debug\DTO.dll
+E:\פרויקט\ServerSideApplication\DTO\bin\Debug\DTO.pdb
+E:\פרויקט\ServerSideApplication\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+E:\פרויקט\ServerSideApplication\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+E:\פרויקט\ServerSideApplication\DTO\obj\Debug\DTO.dll
+E:\פרויקט\ServerSideApplication\DTO\obj\Debug\DTO.pdb
+F:\פרויקט\ServerSideApplication\DTO\bin\Debug\DTO.dll
+F:\פרויקט\ServerSideApplication\DTO\bin\Debug\DTO.pdb
+F:\פרויקט\ServerSideApplication\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+F:\פרויקט\ServerSideApplication\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+F:\פרויקט\ServerSideApplication\DTO\obj\Debug\DTO.dll
+F:\פרויקט\ServerSideApplication\DTO\obj\Debug\DTO.pdb

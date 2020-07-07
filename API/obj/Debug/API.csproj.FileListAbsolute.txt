@@ -1,0 +1,316 @@
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\API.dll.config
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\API.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\API.pdb
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\csc.exe
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\csc.exe.config
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\csc.rsp
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\csi.exe
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\csi.exe.config
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\csi.rsp
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\Microsoft.CodeAnalysis.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\Microsoft.CSharp.Core.targets
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\Microsoft.Managed.Core.targets
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\System.AppContext.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\System.Collections.Immutable.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\System.Console.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\System.Diagnostics.StackTrace.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\System.IO.Compression.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\System.IO.FileSystem.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\System.IO.FileSystem.Primitives.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\System.IO.Pipes.AccessControl.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\System.IO.Pipes.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\System.Reflection.Metadata.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\System.Security.AccessControl.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\System.Security.Claims.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\System.Security.Cryptography.Encoding.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\System.Security.Cryptography.Primitives.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\System.Security.Principal.Windows.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\System.Text.Encoding.CodePages.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\System.ValueTuple.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\System.Xml.ReaderWriter.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\System.Xml.XmlDocument.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\System.Xml.XPath.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\System.Xml.XPath.XDocument.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\vbc.exe
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\vbc.exe.config
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\vbc.rsp
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\VBCSCompiler.exe
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\roslyn\VBCSCompiler.exe.config
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\BL.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\DTO.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\EntityFramework.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\EntityFramework.SqlServer.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\Newtonsoft.Json.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\System.Net.Http.Formatting.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\System.Web.Http.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\System.Web.Http.WebHost.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\BL.pdb
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\DTO.pdb
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\EntityFramework.xml
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\EntityFramework.SqlServer.xml
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\Newtonsoft.Json.xml
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\System.Net.Http.Formatting.xml
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\System.Web.Http.xml
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\System.Web.Http.WebHost.xml
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\obj\Debug\API.csprojAssemblyReference.cache
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\obj\Debug\API.csproj.CoreCompileInputs.cache
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\obj\Debug\API.csproj.CopyComplete
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\obj\Debug\API.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\obj\Debug\API.pdb
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\System.Web.Cors.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\System.Web.Http.Cors.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\DAL.dll
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\System.Web.Http.Cors.xml
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\DAL.pdb
+Y:\Teachers\Shimonovich\פרויקט סיום\Templates5780G3\ServerSideApplication\API\bin\DAL.dll.config
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\obj\Debug\API.csprojAssemblyReference.cache
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\obj\Debug\API.csproj.CoreCompileInputs.cache
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\obj\Debug\API.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\obj\Debug\API.pdb
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\API.dll.config
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\API.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\API.pdb
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\csc.exe
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\csc.exe.config
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\csc.rsp
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\csi.exe
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\csi.exe.config
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\csi.rsp
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\Microsoft.CodeAnalysis.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\Microsoft.CSharp.Core.targets
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\Microsoft.Managed.Core.targets
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\System.AppContext.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\System.Collections.Immutable.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\System.Console.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\System.Diagnostics.StackTrace.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\System.IO.Compression.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\System.IO.FileSystem.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\System.IO.FileSystem.Primitives.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\System.IO.Pipes.AccessControl.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\System.IO.Pipes.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\System.Reflection.Metadata.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\System.Security.AccessControl.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\System.Security.Claims.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\System.Security.Cryptography.Encoding.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\System.Security.Cryptography.Primitives.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\System.Security.Principal.Windows.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\System.Text.Encoding.CodePages.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\System.ValueTuple.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\System.Xml.ReaderWriter.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\System.Xml.XmlDocument.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\System.Xml.XPath.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\System.Xml.XPath.XDocument.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\vbc.exe
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\vbc.exe.config
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\vbc.rsp
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\VBCSCompiler.exe
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\roslyn\VBCSCompiler.exe.config
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\BL.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\DTO.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\EntityFramework.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\EntityFramework.SqlServer.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\Newtonsoft.Json.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\System.Net.Http.Formatting.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\System.Web.Cors.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\System.Web.Http.Cors.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\System.Web.Http.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\System.Web.Http.WebHost.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\DAL.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\BL.pdb
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\DTO.pdb
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\EntityFramework.xml
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\EntityFramework.SqlServer.xml
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\System.Net.Http.Formatting.xml
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\System.Web.Http.xml
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\System.Web.Http.Cors.xml
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\Newtonsoft.Json.xml
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\System.Web.Http.WebHost.xml
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\DAL.pdb
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\bin\DAL.dll.config
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\project\ServerSideApplication\API\obj\Debug\API.csproj.CopyComplete
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\API.dll.config
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\API.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\API.pdb
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\csc.exe
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\csc.exe.config
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\csc.rsp
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\csi.exe
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\csi.exe.config
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\csi.rsp
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\Microsoft.CodeAnalysis.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\Microsoft.CSharp.Core.targets
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\Microsoft.Managed.Core.targets
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\System.AppContext.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\System.Collections.Immutable.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\System.Console.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\System.Diagnostics.StackTrace.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\System.IO.Compression.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\System.IO.FileSystem.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\System.IO.FileSystem.Primitives.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\System.IO.Pipes.AccessControl.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\System.IO.Pipes.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\System.Reflection.Metadata.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\System.Security.AccessControl.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\System.Security.Claims.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\System.Security.Cryptography.Encoding.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\System.Security.Cryptography.Primitives.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\System.Security.Principal.Windows.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\System.Text.Encoding.CodePages.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\System.ValueTuple.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\System.Xml.ReaderWriter.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\System.Xml.XmlDocument.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\System.Xml.XPath.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\System.Xml.XPath.XDocument.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\vbc.exe
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\vbc.exe.config
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\vbc.rsp
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\VBCSCompiler.exe
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\roslyn\VBCSCompiler.exe.config
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\BL.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\DTO.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\EntityFramework.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\EntityFramework.SqlServer.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\Newtonsoft.Json.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\System.Net.Http.Formatting.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\System.Web.Cors.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\System.Web.Http.Cors.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\System.Web.Http.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\System.Web.Http.WebHost.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\DAL.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\BL.pdb
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\DTO.pdb
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\EntityFramework.xml
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\EntityFramework.SqlServer.xml
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\System.Net.Http.Formatting.xml
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\System.Web.Http.xml
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\System.Web.Http.Cors.xml
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\Newtonsoft.Json.xml
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\System.Web.Http.WebHost.xml
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\DAL.pdb
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\bin\DAL.dll.config
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\obj\Debug\API.csprojAssemblyReference.cache
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\obj\Debug\API.csproj.CoreCompileInputs.cache
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\obj\Debug\API.csproj.CopyComplete
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\obj\Debug\API.dll
+Y:\תשפ\3\רחלי פוחוביץ\פרויקט\ServerSideApplication\API\obj\Debug\API.pdb
+E:\פרויקט\ServerSideApplication\API\obj\Debug\API.csprojAssemblyReference.cache
+E:\פרויקט\ServerSideApplication\API\obj\Debug\API.csproj.CoreCompileInputs.cache
+E:\פרויקט\ServerSideApplication\API\obj\Debug\API.dll
+E:\פרויקט\ServerSideApplication\API\obj\Debug\API.pdb
+F:\פרויקט\ServerSideApplication\API\bin\API.dll.config
+F:\פרויקט\ServerSideApplication\API\bin\API.dll
+F:\פרויקט\ServerSideApplication\API\bin\API.pdb
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\csc.exe
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\csc.exe.config
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\csc.rsp
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\csi.exe
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\csi.exe.config
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\csi.rsp
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\Microsoft.Managed.Core.targets
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\System.AppContext.dll
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\System.Collections.Immutable.dll
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\System.Console.dll
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\System.IO.Compression.dll
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\System.IO.FileSystem.dll
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\System.IO.Pipes.AccessControl.dll
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\System.IO.Pipes.dll
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\System.Reflection.Metadata.dll
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\System.Security.AccessControl.dll
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\System.Security.Claims.dll
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\System.Security.Principal.Windows.dll
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\System.ValueTuple.dll
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\System.Xml.XmlDocument.dll
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\System.Xml.XPath.dll
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\vbc.exe
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\vbc.exe.config
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\vbc.rsp
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\VBCSCompiler.exe
+F:\פרויקט\ServerSideApplication\API\bin\roslyn\VBCSCompiler.exe.config
+F:\פרויקט\ServerSideApplication\API\bin\BL.dll
+F:\פרויקט\ServerSideApplication\API\bin\DTO.dll
+F:\פרויקט\ServerSideApplication\API\bin\EntityFramework.dll
+F:\פרויקט\ServerSideApplication\API\bin\EntityFramework.SqlServer.dll
+F:\פרויקט\ServerSideApplication\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\פרויקט\ServerSideApplication\API\bin\Newtonsoft.Json.dll
+F:\פרויקט\ServerSideApplication\API\bin\System.Net.Http.Formatting.dll
+F:\פרויקט\ServerSideApplication\API\bin\System.Web.Cors.dll
+F:\פרויקט\ServerSideApplication\API\bin\System.Web.Http.Cors.dll
+F:\פרויקט\ServerSideApplication\API\bin\System.Web.Http.dll
+F:\פרויקט\ServerSideApplication\API\bin\System.Web.Http.WebHost.dll
+F:\פרויקט\ServerSideApplication\API\bin\DAL.dll
+F:\פרויקט\ServerSideApplication\API\bin\BL.pdb
+F:\פרויקט\ServerSideApplication\API\bin\DTO.pdb
+F:\פרויקט\ServerSideApplication\API\bin\EntityFramework.xml
+F:\פרויקט\ServerSideApplication\API\bin\EntityFramework.SqlServer.xml
+F:\פרויקט\ServerSideApplication\API\bin\System.Net.Http.Formatting.xml
+F:\פרויקט\ServerSideApplication\API\bin\System.Web.Http.xml
+F:\פרויקט\ServerSideApplication\API\bin\System.Web.Http.Cors.xml
+F:\פרויקט\ServerSideApplication\API\bin\Newtonsoft.Json.xml
+F:\פרויקט\ServerSideApplication\API\bin\System.Web.Http.WebHost.xml
+F:\פרויקט\ServerSideApplication\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\פרויקט\ServerSideApplication\API\bin\DAL.pdb
+F:\פרויקט\ServerSideApplication\API\bin\DAL.dll.config
+F:\פרויקט\ServerSideApplication\API\obj\Debug\API.csprojAssemblyReference.cache
+F:\פרויקט\ServerSideApplication\API\obj\Debug\API.csproj.CoreCompileInputs.cache
+F:\פרויקט\ServerSideApplication\API\obj\Debug\API.csproj.CopyComplete
+F:\פרויקט\ServerSideApplication\API\obj\Debug\API.dll
+F:\פרויקט\ServerSideApplication\API\obj\Debug\API.pdb
