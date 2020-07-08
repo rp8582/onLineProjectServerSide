@@ -8,6 +8,21 @@ namespace DAL
 {
     public class BusinessDal
     {
+        public static List<business> GetBusinesses()
+        {
+            try
+            {
+                using(onLineEntities1 entities1 = new onLineEntities1())
+                {
+                    return entities1.businesses.Include("services").ToList();
+                }
+            }
+            catch(Exception)
+            {
+                throw;
+            }
+        }
+
         public static business GetBusinessById(int id)
         {
             try

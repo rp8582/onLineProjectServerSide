@@ -26,7 +26,7 @@ namespace BL.services
                 string geoCodeInfo = wc.DownloadString(uri);
                 XmlDocument xmlDoc = new XmlDocument();
                 xmlDoc.LoadXml(geoCodeInfo);
-
+                //todo: מה הבעיה?????????????????????
                 string duration = xmlDoc.DocumentElement.SelectSingleNode("/DistanceMatrixResponse/row/element/duration/value").InnerText;
                 return Convert.ToInt32(duration) / 60;
             }

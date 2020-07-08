@@ -4,22 +4,24 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="575adb54395e4eb3beb13f87761bc638" Name="Diagram1">
+      <Diagram DiagramId="49d5581ef6ca43a3833f59a40d7696b0" Name="Diagram1">
         <EntityTypeShape EntityType="onLineModel.activityTime" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
         <EntityTypeShape EntityType="onLineModel.business" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="onLineModel.category" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
         <EntityTypeShape EntityType="onLineModel.customer" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="onLineModel.customersInLine" Width="1.5" PointX="7.5" PointY="4.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="onLineModel.ranx" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="onLineModel.customersInLine" Width="1.5" PointX="7.5" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="onLineModel.ranx" Width="1.5" PointX="9.75" PointY="3.625" IsExpanded="true" />
         <EntityTypeShape EntityType="onLineModel.service" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="onLineModel.swap" Width="1.5" PointX="2.75" PointY="9.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="onLineModel.unusual" Width="1.5" PointX="7.5" PointY="8.75" IsExpanded="true" />
-        <AssociationConnector Association="onLineModel.FK__activityT__servi__403A8C7D" ManuallyRouted="false" />
-        <AssociationConnector Association="onLineModel.FK__customers__activ__5CD6CB2B" ManuallyRouted="false" />
-        <AssociationConnector Association="onLineModel.FK__unusuals__activi__45F365D3" ManuallyRouted="false" />
-        <AssociationConnector Association="onLineModel.FK__services__busine__3C69FB99" ManuallyRouted="false" />
-        <AssociationConnector Association="onLineModel.FK__services__catego__3D5E1FD2" ManuallyRouted="false" />
-        <AssociationConnector Association="onLineModel.FK__customers__custI__5BE2A6F2" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="onLineModel.swap" Width="1.5" PointX="9.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="onLineModel.unusual" Width="1.5" PointX="7.5" PointY="9.875" IsExpanded="true" />
+        <AssociationConnector Association="onLineModel.FK__activityT__servi__1920BF5C" ManuallyRouted="false" />
+        <AssociationConnector Association="onLineModel.FK__customers__activ__22AA2996" ManuallyRouted="false" />
+        <AssociationConnector Association="onLineModel.FK__unusuals__activi__1ED998B2" ManuallyRouted="false" />
+        <AssociationConnector Association="onLineModel.FK__services__busine__15502E78" ManuallyRouted="false" />
+        <AssociationConnector Association="onLineModel.FK__services__catego__164452B1" ManuallyRouted="false" />
+        <AssociationConnector Association="onLineModel.FK__customers__custI__21B6055D" ManuallyRouted="false" />
+        <AssociationConnector Association="onLineModel.FK__ranges__TurnId__25869641" ManuallyRouted="false" />
+        <AssociationConnector Association="onLineModel.FK__swaps__TurnId__286302EC" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

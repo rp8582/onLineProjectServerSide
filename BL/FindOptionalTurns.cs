@@ -24,12 +24,12 @@ namespace BL
             List<TurnInBusinessDTO> services = new List<TurnInBusinessDTO>();
             List<TurnInBusinessDTO> servicesToReturn = new List<TurnInBusinessDTO>();
             bool pushFlag=false;
-            services = converters.BusinessesToShowConverters.GetBusinessesToShowDTO(ServiceDal.GetServicesByCategory(categoryId));
+            services = converters.TurnInBusinessConverters.GetTurnsInBusinessDTO(ServiceDal.GetServicesByCategory(categoryId));
             services.ForEach(s => s.Duration = TurnServices.GooglePlaces(longitude, latitude, s.Address, isDriving));
             if (services.Count() > 20)
                 services.OrderBy(s => s.Duration).Take(20);
             TimeSpan timeToLookFor;
-            services.ForEach(s => s.EstimatedHour = MakeAppointment.GetOptionalHourPerBusiness(s.ServiceId, timeToLookFor = TimeSpan.FromMinutes(s.Duration).Add(DateTime.Now.TimeOfDay),ref pushFlag));
+            services.ForEach(s => s.EstimatedHour = ImmediateTurn.GetOptionalHourPerBusiness(s.ServiceId, timeToLookFor = TimeSpan.FromMinutes(s.Duration).Add(DateTime.Now.TimeOfDay),ref pushFlag));
 
             services.OrderBy(s => s.EstimatedHour);
    
@@ -37,7 +37,7 @@ namespace BL
             servicesToReturn.AddRange(services.Take(2));
             services.RemoveAll(s => servicesToReturn.Contains(s));
             servicesToReturn.AddRange(services.Where(s=>s.Duration==services.Min(d=>d.Duration)));
-            servicesToReturn.ForEach(s => s.TurnId = MakeAppointment.MakeTemporaryTurn(s,pushFlag));
+            servicesToReturn.ForEach(s => s.TurnId = ImmediateTurn.MakeTemporaryTurn(s,pushFlag));
             //todoever: להחזיר אוביקטים  לפי הסטוריה מועדפים וכו
             return servicesToReturn;
         }
@@ -47,10 +47,10 @@ namespace BL
         {
             bool pushFlag = false;
             TurnInBusinessDTO service = new TurnInBusinessDTO();
-            service = converters.BusinessesToShowConverters.GetBusinessToShowDTO(ServiceDal.GetServicById(serviceId));
+            service = converters.TurnInBusinessConverters.GetTurnInBusinessDTO(ServiceDal.GetServicById(serviceId));
             service.Duration = TurnServices.GooglePlaces(longitude, latitude, service.Address, isDriving);
-            service.EstimatedHour = MakeAppointment.GetOptionalHourPerBusiness(serviceId, TimeSpan.FromMinutes(service.Duration).Add(DateTime.Now.TimeOfDay),ref pushFlag);
-            service.TurnId = MakeAppointment.MakeTemporaryTurn(service,pushFlag);
+            service.EstimatedHour = ImmediateTurn.GetOptionalHourPerBusiness(serviceId, TimeSpan.FromMinutes(service.Duration).Add(DateTime.Now.TimeOfDay),ref pushFlag);
+            service.TurnId = ImmediateTurn.MakeTemporaryTurn(service,pushFlag);
             return service;
         }
     }

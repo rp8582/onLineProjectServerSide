@@ -18,5 +18,7 @@ namespace DAL
         public Nullable<int> TurnId { get; set; }
         public System.TimeSpan startTime { get; set; }
         public System.TimeSpan endTime { get; set; }
+    
+        public virtual customersInLine customersInLine { get; set; }
     }
 }

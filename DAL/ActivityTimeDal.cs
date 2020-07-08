@@ -8,12 +8,21 @@ namespace DAL
 {
     public class ActivityTimeDal
     {
-        public static List<activityTime> GetActivityTimes(int id)
+        public static List<activityTime> GetActivityTimes(int serviceId)
         {
             using (onLineEntities1 entities=new onLineEntities1())
             {
-                return entities.activityTimes.Where(a => a.serviceId == id).ToList();
+                return entities.activityTimes.Where(a => a.serviceId == serviceId).ToList();
             }
         }
+
+        public static List<activityTime> GetActivityTimesByDay(int serviceId,int day)
+        {
+            using(onLineEntities1 entities = new onLineEntities1())
+            {
+                return entities.activityTimes.Where(a => a.serviceId == serviceId && a.dayInWeek==day).ToList();
+            }
+        }
+
     }
 }

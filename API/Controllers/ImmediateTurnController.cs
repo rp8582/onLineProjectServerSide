@@ -9,11 +9,11 @@ using DTO;
 
 namespace API.Controllers
 {
-    [RoutePrefix("turn")]
-    public class TurnController : ApiController
+    [RoutePrefix("immediateTurn")]
+    public class ImmediateTurnController : ApiController
     {
         //http://localhost:52764/turn/turnByCategory?categoryId=5&latitude=32.109333&longitude=34.855499&isDriving=true
-        [Route("turnByCategory")]
+        [Route("immediateTurnByCategory")]
 
         public IHttpActionResult GetBusinessesWithEstimatedHour(string categoryId,string latitude,string longitude,string isDriving)
          {
@@ -31,7 +31,7 @@ namespace API.Controllers
 
         //GET: http://localhost:52764/turn/turnByBusiness/1?latitude=32.109333&longitude=34.855499&isDriving=true
 
-        [Route("turnByBusiness/{serviceId}")]
+        [Route("immediateTurnByBusiness/{serviceId}")]
         
         public IHttpActionResult GetTurn(int serviceId, string latitude,string longitude,string isDriving)
         {
@@ -44,13 +44,14 @@ namespace API.Controllers
                 return BadRequest();
             }
         }
-        
-        [Route("ConfirmTurn")]
+
+        [HttpPost]
+        [Route("ConfirmimmediateTurn")]
         public IHttpActionResult ConfirmTurn([FromBody]TurnDetailsDTO turn)
         {
             try
             {
-                return Ok(MakeAppointment.ConfirmImmediateTurn(turn));
+                return Ok(ImmediateTurn.ConfirmImmediateTurn(turn));
             }
             catch(Exception)
             {

@@ -12,7 +12,7 @@ namespace BL
     {
         public static List<DTO.TurnInBusinessDTO> getTurnsToCustomer(int custId)
         {
-            return BusinessesToShowConverters.GetTurnsToShowDTO(CustInLineDal.GetTurnToCust(custId));
+            return TurnInBusinessConverters.GetTurnsToShowDTO(CustInLineDal.GetTurnToCust(custId));
         }
     }
 }

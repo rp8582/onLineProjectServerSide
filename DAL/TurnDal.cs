@@ -90,7 +90,7 @@ namespace DAL
                     turn.statusTurn = turnToUpdate.statusTurn;
                     turn.verificationCode = turnToUpdate.verificationCode;
 
-                    //entities1.Entry(turnToUpdate).State = EntityState.Modified;
+                    entities1.Entry(turnToUpdate).State = EntityState.Modified;
                     entities1.SaveChanges();
                 }
             }

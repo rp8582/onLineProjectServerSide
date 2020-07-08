@@ -58,3 +58,15 @@ F:\פרויקט\ServerSideApplication\DAL\obj\Debug\DAL.csproj.CoreCompileInputs
 F:\פרויקט\ServerSideApplication\DAL\obj\Debug\DAL.csproj.CopyComplete
 F:\פרויקט\ServerSideApplication\DAL\obj\Debug\DAL.dll
 F:\פרויקט\ServerSideApplication\DAL\obj\Debug\DAL.pdb
+D:\פרויקט\ServerSideApplication\DAL\bin\Debug\DAL.dll.config
+D:\פרויקט\ServerSideApplication\DAL\bin\Debug\DAL.dll
+D:\פרויקט\ServerSideApplication\DAL\bin\Debug\DAL.pdb
+D:\פרויקט\ServerSideApplication\DAL\bin\Debug\EntityFramework.dll
+D:\פרויקט\ServerSideApplication\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\פרויקט\ServerSideApplication\DAL\bin\Debug\EntityFramework.xml
+D:\פרויקט\ServerSideApplication\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\פרויקט\ServerSideApplication\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\פרויקט\ServerSideApplication\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\פרויקט\ServerSideApplication\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\פרויקט\ServerSideApplication\DAL\obj\Debug\DAL.dll
+D:\פרויקט\ServerSideApplication\DAL\obj\Debug\DAL.pdb

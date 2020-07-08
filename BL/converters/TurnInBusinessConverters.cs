@@ -7,10 +7,10 @@ using DTO;
 using DAL;
 namespace BL.converters
 {
-    public class BusinessesToShowConverters
+    public class TurnInBusinessConverters
     {
 
-        public static TurnInBusinessDTO GetBusinessToShowDTO(service service)
+        public static TurnInBusinessDTO GetTurnInBusinessDTO(service service)
         {
 
             TurnInBusinessDTO business = new TurnInBusinessDTO()
@@ -23,10 +23,10 @@ namespace BL.converters
             return business;
         }
 
-        public static List<TurnInBusinessDTO> GetBusinessesToShowDTO(List<service> services)
+        public static List<TurnInBusinessDTO> GetTurnsInBusinessDTO(List<service> services)
         {
             List<TurnInBusinessDTO> businesses = new List<TurnInBusinessDTO>();
-            services.ForEach(b => businesses.Add(GetBusinessToShowDTO(b)));
+            services.ForEach(b => businesses.Add(GetTurnInBusinessDTO(b)));
             return businesses;
 
         }

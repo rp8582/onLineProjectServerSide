@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using DTO;
 
-//toask: dto משתמשים דוקא באוביקטים של  blהאם ב
 namespace BL
 {
     public class ActivityTimeBL

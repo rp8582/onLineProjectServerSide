@@ -10,6 +10,8 @@ namespace BL
     {
         public static List<DTO.CategoryDTO> GetCategories()
         {
+            //toask: timer
+            //toask: to add try and catch
             try
             {
                 return converters.CategoryConverters.GetCategoriesDTO(DAL.CategoryDal.GetCategories());

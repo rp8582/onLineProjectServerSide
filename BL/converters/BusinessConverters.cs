@@ -4,51 +4,51 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAL;
+
 
 namespace BL.converters
 {
-  public  class BusinessConverters
+    public class BusinessConverters
     {
 
-        public static DAL.business GetBusiness(BusinessDTO BusinessDto)
+        public static business GetBusiness(BusinessDTO BusinessDto)
         {
-            DAL.business business = new DAL.business()
+            business business = new DAL.business()
             {
                 businessName = BusinessDto.BusinessName ,
                 passward = BusinessDto.Password ,
-                Adress_city = BusinessDto.Address_city ,
-                Adress_street = BusinessDto.Address_street ,
-                Adress_numOfStreet = BusinessDto.Address_numOfBuilding ,
+                Adress_street = BusinessDto.Address,
+
                 managerid = BusinessDto.ChainManagerId
             };
             return business;
         }
 
-        public static BusinessDTO GetBusinessDTO(DAL.business business)
+        public static BusinessDTO GetBusinessDTO(business business)
         {
             BusinessDTO businessDTO = new BusinessDTO()
             {
                 BusinessId = business.businessId ,
                 BusinessName = business.businessName ,
                 Password = business.passward ,
-                Address_city = business.Adress_city ,
-                Address_street = business.Adress_street ,
-                Address_numOfBuilding = business.Adress_numOfStreet ,
-                ChainManagerId = (int) business.managerid
+                Address = business.Adress_street + " " + business.Adress_numOfStreet + " " + business.Adress_city ,
+                // ChainManagerId = (int) business.managerid ,
+                Services = ServiceConverters.GetServicesDTO(business.services.ToList())
             };
             return businessDTO;
         }
 
-        public static List<BusinessDTO> GetListBusinessDTO(List<DAL.business> lBusiness)
+        public static List<BusinessDTO> GetListBusinessDTO(List<business> lBusiness)
         {
             List<BusinessDTO> l = new List<BusinessDTO>();
             lBusiness.ForEach(b => l.Add(GetBusinessDTO(b)));
             return l;
         }
 
-        public static List<DAL.business> GetListBusiness(List<BusinessDTO> lBusiness)
+        public static List<business> GetListBusiness(List<BusinessDTO> lBusiness)
         {
-            List<DAL.business> l = new List<DAL.business>();
+            List<DAL.business> l = new List<business>();
             lBusiness.ForEach(b => l.Add(GetBusiness(b)));
             return l;
         }
@@ -57,7 +57,7 @@ namespace BL.converters
 
         /// business to show
 
-        public static TurnInBusinessDTO GetSmallBusinessDTO(DAL.business business)
+        public static TurnInBusinessDTO GetSmallBusinessDTO(business business)
         {
             TurnInBusinessDTO businessDTO = new TurnInBusinessDTO()
             {
@@ -68,7 +68,7 @@ namespace BL.converters
         }
 
 
-        public static List<TurnInBusinessDTO> GetListSmallBusinessDTO(List<DAL.business> lBusiness)
+        public static List<TurnInBusinessDTO> GetListSmallBusinessDTO(List<business> lBusiness)
         {
             List<TurnInBusinessDTO> l = new List<TurnInBusinessDTO>();
             lBusiness.ForEach(b => l.Add(GetSmallBusinessDTO(b)));

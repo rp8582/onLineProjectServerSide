@@ -14,6 +14,13 @@ namespace DAL
     
     public partial class customersInLine
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public customersInLine()
+        {
+            this.ranges = new HashSet<ranx>();
+            this.swaps = new HashSet<swap>();
+        }
+    
         public int TurnId { get; set; }
         public int custId { get; set; }
         public int activityTimeId { get; set; }
@@ -27,5 +34,9 @@ namespace DAL
     
         public virtual activityTime activityTime { get; set; }
         public virtual customer customer { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ranx> ranges { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<swap> swaps { get; set; }
     }
 }
