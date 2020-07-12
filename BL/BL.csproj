@@ -67,9 +67,14 @@
     <Compile Include="FindOptionalTurns.cs" />
     <Compile Include="ImmediateTurn.cs" />
     <Compile Include="MakeAppointment.cs" />
+    <Compile Include="manager\IAuthService.cs" />
+    <Compile Include="manager\JWTService.cs" />
+    <Compile Include="models\IAuthContainerModel.cs" />
+    <Compile Include="models\JWTContainerModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="services\PushException.cs" />
     <Compile Include="services\TurnServices.cs" />
+    <Compile Include="Token.cs" />
     <Compile Include="TurnBL.cs" />
   </ItemGroup>
   <ItemGroup>
