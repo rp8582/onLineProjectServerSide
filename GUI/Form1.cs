@@ -29,7 +29,7 @@ namespace GUI
 
             //};
             //DAL.BusinessDal.AddBusiness(BL.converters.BusinessConverters.GetBusiness(business));
-
+            /*
             DTO.CustomerInLineDTO customerInLine = new DTO.CustomerInLineDTO()
             {
                 ActivityTimeId = 8,
@@ -40,6 +40,11 @@ namespace GUI
 
             };
             DAL.TurnDal.AddAppointment(BL.converters.CustomerInLineConvrters.GetCustomerInLine(customerInLine));
+            */
+
+           string token= BL.Token.GetToken("name", "05354345");
+            string phone = BL.Token.GetPhoneFromToken(token);
+            textBox1.Text = phone;
         }
     }
 }

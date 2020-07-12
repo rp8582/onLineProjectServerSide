@@ -13,6 +13,7 @@ namespace API
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
         }
+        /*
         protected void Application_BeginRequest()
         {
             Response.AddHeader("Access-Control-Allow-Origin", "*");
@@ -26,6 +27,6 @@ namespace API
             }
 
 
-        }
+        }*/
     }
 }

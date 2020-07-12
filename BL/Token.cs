@@ -29,32 +29,28 @@ namespace BL
             IAuthService authService = new JWTService(model.SecretKey);
 
             string token = authService.GenerateToken(model);
-            if (!authService.IsTokenValid(token))
-                throw new UnauthorizedAccessException();
-            else
-            {
-                List<Claim> claims = authService.GetTokenClaims(token).ToList();
-
-                string tokenName = claims.FirstOrDefault(e => e.Type.Equals(ClaimTypes.Name)).Value;
-                string tokenPhone = claims.FirstOrDefault(e => e.Type.Equals(ClaimTypes.MobilePhone)).Value;
-
-            }
+           
             return token;
         }
-        /*
+        
         public static string GetPhoneFromToken(string token)
         {
-          
-            if (!authService.IsTokenValid(token))
+            string tokenPhone;
+            IAuthContainerModel model = new JWTContainerModel();
+
+            IAuthService authService = new JWTService(model.SecretKey);
+
+            /*if (!authService.IsTokenValid(token))
                 throw new UnauthorizedAccessException();
             else
-            {
+            {*/
                 List<Claim> claims = authService.GetTokenClaims(token).ToList();
 
                 string tokenName = claims.FirstOrDefault(e => e.Type.Equals(ClaimTypes.Name)).Value;
-                string tokenPhone = claims.FirstOrDefault(e => e.Type.Equals(ClaimTypes.MobilePhone)).Value;
-
-            }
-        }*/
+                tokenPhone = claims.FirstOrDefault(e => e.Type.Equals(ClaimTypes.MobilePhone)).Value;
+                
+            //}
+            return tokenPhone;
+        }
     }
 }

@@ -64,3 +64,11 @@ D:\פרויקט\ServerSideApplication\GUI\obj\Debug\GUI.csproj.CoreCompileInputs
 D:\פרויקט\ServerSideApplication\GUI\obj\Debug\GUI.csproj.CopyComplete
 D:\פרויקט\ServerSideApplication\GUI\obj\Debug\GUI.exe
 D:\פרויקט\ServerSideApplication\GUI\obj\Debug\GUI.pdb
+D:\פרויקט\ServerSideApplication\GUI\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+D:\פרויקט\ServerSideApplication\GUI\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+D:\פרויקט\ServerSideApplication\GUI\bin\Debug\Microsoft.IdentityModel.Logging.dll
+D:\פרויקט\ServerSideApplication\GUI\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\פרויקט\ServerSideApplication\GUI\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+D:\פרויקט\ServerSideApplication\GUI\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+D:\פרויקט\ServerSideApplication\GUI\bin\Debug\Microsoft.IdentityModel.Logging.xml
+D:\פרויקט\ServerSideApplication\GUI\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
