@@ -57,7 +57,9 @@ namespace BL
 
             try
             {
+                if(service.EstimatedHour!=new TimeSpan())
                 service.TurnId = ImmediateTurn.MakeTemporaryTurn(service, pushFlag, custId);
+                //todo: במקרה שהעסק סגור להציע לו תור במשמרת הבאה
 
             }
             catch (Exception ex)

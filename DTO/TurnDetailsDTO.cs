@@ -13,6 +13,7 @@ namespace DTO
         public int TurnId { get; set; }
         public int PreAlert { get; set; }
         public int ServiceId { get; set; }
-        public TimeSpan EstimatedHour { get; set; }
+        public DateTime EstimatedHour { get; set; }
+    }
     }
 }

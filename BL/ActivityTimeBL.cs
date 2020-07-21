@@ -11,11 +11,12 @@ namespace BL
     public class ActivityTimeBL
     {
         /// <summary>
-        /// הפונקציה מקבלת שעה וקוד משמרת ומחפשת את המשמרת בשירות הספציפי בהתאם לשעה שקיבלה
+        /// הפונקציה מקבלת שעה וקוד שירות ומחפשת את המשמרת בשירות הספציפי בהתאם לשעה שקיבלה
         /// </summary>
         /// <param name="time">שעה</param>
         /// <param name="serviceId">קוד שירות</param>
         /// <returns>קוד משמרת </returns>
+        //todo: לעשות את הפונקציה יותר גנרית שתתאים גם לתור מראש
         public static ActivityTimeDTO GetActivityTime(TimeSpan time, int serviceId)
         {
             List<ActivityTimeDTO> activityTimes = new List<ActivityTimeDTO>();

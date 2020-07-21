@@ -10,16 +10,20 @@ namespace BL
 {
     public class MakeAppointment
     {
-
+        //todo: לשנות בחיפוש שעה פנויה לenterhour  
+        //todo: וכל מה שנגזר מהשינוי
         public static void BookAppointment(TurnDetailsDTO appointment)
         {
+            ActivityTimeDTO activityTime = ActivityTimeBL.GetActivityTime(appointment.EstimatedHour.TimeOfDay, appointment.ServiceId);
+            
             customersInLine turn = new customersInLine()
             {
-                //activityTimeId = appointment.ServiceId,
-                custId=appointment.CustId,
-                //toask: why is there this difference between the dto and the entity object?
-                //estimatedHour =appointment.EstimatedHour
-                statusTurn=1,    
+                activityTimeId =activityTime.ActivityTimeId ,
+                custId = appointment.CustId,
+
+                estimatedHour = appointment.EstimatedHour,
+                statusTurn=1,
+                enterHour=ConfigureHour(appointment.EstimatedHour,activityTime)
             };
 
         }
@@ -64,6 +68,28 @@ namespace BL
             }
             return optionalHours;
 
+        }
+        /// <summary>
+        /// פונקציה המחשבת את השעה עבור תור הנקבע מראש ומטרתה לחסוך המתנה בזמני עומס  
+        /// </summary>
+        /// <param name="date"></param>
+        /// <param name="activityTime"></param>
+        /// <returns>שעה לוגית  </returns>
+        public static TimeSpan ConfigureHour(DateTime date,ActivityTimeDTO activityTime)
+        {
+            TimeSpan  logicHour= new TimeSpan();
+            //todo: לקבוע את המשתנה בהתאם לאמינות-לסטית תקן
+            int numOfIgnoreServiceDuration = 3;
+            //
+            //todo:לשנות את השם בדטהביס activityTime.AverageNumOfWaitingPeople
+            int numOfSub = (int)(activityTime.AverageNumOfWaitingPeople.Value / activityTime.ActualDurationOfService - numOfIgnoreServiceDuration);
+
+            logicHour = date.TimeOfDay.Subtract(TimeSpan.FromMinutes(activityTime.ActualDurationOfService.Value * numOfSub));
+            if (logicHour > activityTime.StartTime)
+                return logicHour;
+            else
+                return activityTime.StartTime;
+ 
         }
 
     }
