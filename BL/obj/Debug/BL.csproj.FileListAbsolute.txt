@@ -88,3 +88,7 @@ F:\פרויקט\ServerSideApplication\BL\bin\Debug\Microsoft.IdentityModel.JsonW
 F:\פרויקט\ServerSideApplication\BL\bin\Debug\Microsoft.IdentityModel.Logging.xml
 F:\פרויקט\ServerSideApplication\BL\bin\Debug\Microsoft.IdentityModel.Tokens.xml
 F:\פרויקט\ServerSideApplication\BL\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+H:\פרויקט\ServerSideApplication\BL\obj\Debug\BL.csprojAssemblyReference.cache
+H:\פרויקט\ServerSideApplication\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+H:\פרויקט\ServerSideApplication\BL\obj\Debug\BL.dll
+H:\פרויקט\ServerSideApplication\BL\obj\Debug\BL.pdb

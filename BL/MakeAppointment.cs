@@ -13,18 +13,23 @@ namespace BL
 
         public static void BookAppointment(TurnDetailsDTO appointment)
         {
+            ActivityTimeDTO activityTime = ActivityTimeBL.GetActivityTime(appointment.EstimatedHour.TimeOfDay , appointment.ServiceId);
             customersInLine turn = new customersInLine()
             {
-                //activityTimeId = appointment.ServiceId,
+                activityTimeId = activityTime.ActivityTimeId,
                 custId=appointment.CustId,
-                //toask: why is there this difference between the dto and the entity object?
-                //estimatedHour =appointment.EstimatedHour
-                statusTurn=1,    
+                estimatedHour =appointment.EstimatedHour,
+                statusTurn=1,
+                
             };
-
         }
-
-
+        //todo: ?למצוא שם מתאים יותר
+        public static TimeSpan ConsiderHour(DateTime dateTime, ActivityTimeDTO activityTime)
+        {
+            //מה משך זמן ארוך יותר
+            //todo: change in database: avgNumOfWaitingPeople-avgDuration
+            //
+        }
 
         public static List<int> GetOptionalDaysPerService(int serviceId)
         {

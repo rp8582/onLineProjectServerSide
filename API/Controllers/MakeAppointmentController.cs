@@ -12,6 +12,7 @@ namespace API.Controllers
 {
     [EnableCors("*", "*", "*")]
     [RoutePrefix("appointment")]
+
     public class MakeAppointmentController : ApiController
     {
         //get business

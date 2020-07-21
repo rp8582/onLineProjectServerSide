@@ -34,3 +34,9 @@ D:\פרויקט\ServerSideApplication\DTO\obj\Debug\DTO.csprojAssemblyReference.
 D:\פרויקט\ServerSideApplication\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\פרויקט\ServerSideApplication\DTO\obj\Debug\DTO.dll
 D:\פרויקט\ServerSideApplication\DTO\obj\Debug\DTO.pdb
+H:\פרויקט\ServerSideApplication\DTO\bin\Debug\DTO.dll
+H:\פרויקט\ServerSideApplication\DTO\bin\Debug\DTO.pdb
+H:\פרויקט\ServerSideApplication\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+H:\פרויקט\ServerSideApplication\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+H:\פרויקט\ServerSideApplication\DTO\obj\Debug\DTO.dll
+H:\פרויקט\ServerSideApplication\DTO\obj\Debug\DTO.pdb

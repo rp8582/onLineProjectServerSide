@@ -43,7 +43,7 @@ namespace GUI
             */
 
            string token= BL.Token.GetToken("name", "05354345");
-            string phone = BL.Token.GetPhoneFromToken(token);
+            //string phone = BL.Token.GetPhoneFromToken(token);
             textBox1.Text = phone;
         }
     }
