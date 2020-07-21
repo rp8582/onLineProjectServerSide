@@ -4,23 +4,48 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
+using BL;
 
 namespace API.Controllers
 {
+    [EnableCors("*", "*", "*")]
+
     public class CustInTurnController : ApiController
     {
-        public IHttpActionResult GetTurnsToCustomer()
+        public IHttpActionResult GetTurnsToCustomer(HttpRequestMessage request)
         {
-            //todo: לחלץ token
-            int custId = 2;
+
+
             try
             {
-                return Ok(BL.CustInLineBL.getTurnsToCustomer(custId));
+                String access_token = request.Headers.Authorization.ToString();
+                int custId = Token.GetCustIdFromToken(access_token);
+                return Ok(CustInLineBL.GetTurnsToCustomer(custId));
+            }
+            catch (NullReferenceException ex)
+            {
+                return BadRequest(ex.Message);
             }
             catch (Exception)
             {
                 return BadRequest();
             }
         }
+
+        public IHttpActionResult DeleteTurn(int turnId)
+        {
+            try
+            {
+                TurnBL.DeleteTurn(turnId);
+                return Ok();
+            }
+            catch
+            {
+                return BadRequest();
+            }
+        }
+
+
     }
 }

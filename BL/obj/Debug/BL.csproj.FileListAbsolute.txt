@@ -80,3 +80,11 @@ D:\פרויקט\ServerSideApplication\BL\bin\Debug\Microsoft.IdentityModel.JsonW
 D:\פרויקט\ServerSideApplication\BL\bin\Debug\Microsoft.IdentityModel.Logging.xml
 D:\פרויקט\ServerSideApplication\BL\bin\Debug\Microsoft.IdentityModel.Tokens.xml
 D:\פרויקט\ServerSideApplication\BL\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+F:\פרויקט\ServerSideApplication\BL\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\פרויקט\ServerSideApplication\BL\bin\Debug\Microsoft.IdentityModel.Logging.dll
+F:\פרויקט\ServerSideApplication\BL\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+F:\פרויקט\ServerSideApplication\BL\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+F:\פרויקט\ServerSideApplication\BL\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+F:\פרויקט\ServerSideApplication\BL\bin\Debug\Microsoft.IdentityModel.Logging.xml
+F:\פרויקט\ServerSideApplication\BL\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+F:\פרויקט\ServerSideApplication\BL\bin\Debug\System.IdentityModel.Tokens.Jwt.xml

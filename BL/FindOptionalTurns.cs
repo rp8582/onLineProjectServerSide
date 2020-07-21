@@ -19,38 +19,52 @@ namespace BL
         /// <param name="longitude">קו רוחב</param>
         /// <param name="isDriving">האם מגיע ברכב או ברגל</param>
         /// <returns>רשימת עסקים מסוננת עם שעה אפשרית</returns>
-        public static List<TurnInBusinessDTO> GetPossibleBusinessesWithHour(int categoryId, string latitude, string longitude, bool isDriving)
+        public static List<TurnInBusinessDTO> GetPossibleBusinessesWithHour(int categoryId, string latitude, string longitude, bool isDriving, int custId)
         {
             List<TurnInBusinessDTO> services = new List<TurnInBusinessDTO>();
             List<TurnInBusinessDTO> servicesToReturn = new List<TurnInBusinessDTO>();
-            bool pushFlag=false;
+            bool pushFlag = false;
             services = converters.TurnInBusinessConverters.GetTurnsInBusinessDTO(ServiceDal.GetServicesByCategory(categoryId));
             services.ForEach(s => s.Duration = TurnServices.GooglePlaces(longitude, latitude, s.Address, isDriving));
             if (services.Count() > 20)
                 services.OrderBy(s => s.Duration).Take(20);
             TimeSpan timeToLookFor;
-            services.ForEach(s => s.EstimatedHour = ImmediateTurn.GetOptionalHourPerBusiness(s.ServiceId, timeToLookFor = TimeSpan.FromMinutes(s.Duration).Add(DateTime.Now.TimeOfDay),ref pushFlag));
-
+            services.ForEach(s => s.EstimatedHour = ImmediateTurn.GetOptionalHourPerBusiness(s.ServiceId, timeToLookFor = TimeSpan.FromMinutes(s.Duration).Add(DateTime.Now.TimeOfDay), ref pushFlag));
             services.OrderBy(s => s.EstimatedHour);
-   
+
             services.RemoveAll(s => s.EstimatedHour == new TimeSpan());
             servicesToReturn.AddRange(services.Take(2));
             services.RemoveAll(s => servicesToReturn.Contains(s));
-            servicesToReturn.AddRange(services.Where(s=>s.Duration==services.Min(d=>d.Duration)));
-            servicesToReturn.ForEach(s => s.TurnId = ImmediateTurn.MakeTemporaryTurn(s,pushFlag));
+            servicesToReturn.AddRange(services.Where(s => s.Duration == services.Min(d => d.Duration)));
+
+            if (servicesToReturn.Count == 0)
+                throw new Exception("כרגע אין שירותים פעילים");
+            servicesToReturn.ForEach(s => s.TurnId = ImmediateTurn.MakeTemporaryTurn(s, pushFlag, custId));
+
+
             //todoever: להחזיר אוביקטים  לפי הסטוריה מועדפים וכו
             return servicesToReturn;
         }
 
 
-        public static TurnInBusinessDTO GetPossibleBusinessWithHour(int serviceId, string latitude, string longitude, bool isDriving)
+        public static TurnInBusinessDTO GetPossibleBusinessWithHour(int serviceId, string latitude, string longitude, bool isDriving, int custId)
         {
             bool pushFlag = false;
             TurnInBusinessDTO service = new TurnInBusinessDTO();
             service = converters.TurnInBusinessConverters.GetTurnInBusinessDTO(ServiceDal.GetServicById(serviceId));
             service.Duration = TurnServices.GooglePlaces(longitude, latitude, service.Address, isDriving);
-            service.EstimatedHour = ImmediateTurn.GetOptionalHourPerBusiness(serviceId, TimeSpan.FromMinutes(service.Duration).Add(DateTime.Now.TimeOfDay),ref pushFlag);
-            service.TurnId = ImmediateTurn.MakeTemporaryTurn(service,pushFlag);
+            service.EstimatedHour = ImmediateTurn.GetOptionalHourPerBusiness(serviceId, TimeSpan.FromMinutes(service.Duration).Add(DateTime.Now.TimeOfDay), ref pushFlag);
+
+            try
+            {
+                service.TurnId = ImmediateTurn.MakeTemporaryTurn(service, pushFlag, custId);
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
             return service;
         }
     }

@@ -6,12 +6,13 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using DAL;
 
 namespace BL
 {
     public class Token
     {
-        private static JWTContainerModel getJWTContainerModel(string name,string phone)
+        private static JWTContainerModel getJWTContainerModel(string name, string phone)
         {
             return new JWTContainerModel()
             {
@@ -23,34 +24,58 @@ namespace BL
             };
         }
 
-        public static string GetToken(string name,string phone)
+        public static string GetToken(string name, string phone)
         {
             IAuthContainerModel model = getJWTContainerModel(name, phone);
             IAuthService authService = new JWTService(model.SecretKey);
 
             string token = authService.GenerateToken(model);
-           
+
             return token;
         }
-        
-        public static string GetPhoneFromToken(string token)
+
+        private static string getPhoneFromToken(string token)
         {
-            string tokenPhone;
-            IAuthContainerModel model = new JWTContainerModel();
+            try
+            {
+                string tokenPhone;
+                IAuthContainerModel model = new JWTContainerModel();
 
-            IAuthService authService = new JWTService(model.SecretKey);
-
-            /*if (!authService.IsTokenValid(token))
-                throw new UnauthorizedAccessException();
-            else
-            {*/
+                IAuthService authService = new JWTService(model.SecretKey);
                 List<Claim> claims = authService.GetTokenClaims(token).ToList();
 
                 string tokenName = claims.FirstOrDefault(e => e.Type.Equals(ClaimTypes.Name)).Value;
                 tokenPhone = claims.FirstOrDefault(e => e.Type.Equals(ClaimTypes.MobilePhone)).Value;
-                
-            //}
-            return tokenPhone;
+
+                return tokenPhone;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public static int GetCustIdFromToken(string token)
+        {
+            try
+            {
+                string phone = getPhoneFromToken(token);
+                return CustomerDal.GetCustId(phone);
+            }
+            catch (NullReferenceException ex)
+            {
+                throw ex;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public static void AddCustomer(string name, string phone)
+        {
+            customer customer = new customer() { custName = name, phoneNumber = phone };
+            CustomerDal.AddCustomer(customer);
         }
     }
 }

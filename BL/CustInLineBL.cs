@@ -10,9 +10,11 @@ namespace BL
 {
     public class CustInLineBL
     {
-        public static List<DTO.TurnInBusinessDTO> getTurnsToCustomer(int custId)
+        public static List<DTO.TurnInBusinessDTO> GetTurnsToCustomer(int custId)
         {
             return TurnInBusinessConverters.GetTurnsToShowDTO(CustInLineDal.GetTurnToCust(custId));
         }
+
+
     }
 }

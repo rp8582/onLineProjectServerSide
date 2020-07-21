@@ -4,28 +4,30 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using BL;
 using DTO;
 
 namespace API.Controllers
 {
-    [RoutePrefix("immediateTurn")]
+    [EnableCors("*", "*", "*")]
+    [RoutePrefix("api")]
     public class ImmediateTurnController : ApiController
     {
         //http://localhost:52764/turn/turnByCategory?categoryId=5&latitude=32.109333&longitude=34.855499&isDriving=true
         [Route("immediateTurnByCategory")]
 
-        public IHttpActionResult GetBusinessesWithEstimatedHour(string categoryId,string latitude,string longitude,string isDriving)
+        public IHttpActionResult GetImmediateTurnByCategory(HttpRequestMessage request, string categoryId,string latitude,string longitude,string isDriving)
          {
              try
              {
-
-                 return Ok(FindOptionalTurns.GetPossibleBusinessesWithHour(int.Parse(categoryId), latitude, longitude, bool.Parse(isDriving)));
+                String access_token = request.Headers.Authorization.ToString();
+                int custId = Token.GetCustIdFromToken(access_token);
+                return Ok(FindOptionalTurns.GetPossibleBusinessesWithHour(int.Parse(categoryId), latitude, longitude, bool.Parse(isDriving),custId));
              }
-             catch (Exception)
+             catch (Exception ex)
              {
-
-                 return BadRequest();
+                 return BadRequest(ex.Message);
              }
          }
 
@@ -33,15 +35,17 @@ namespace API.Controllers
 
         [Route("immediateTurnByBusiness/{serviceId}")]
         
-        public IHttpActionResult GetTurn(int serviceId, string latitude,string longitude,string isDriving)
+        public IHttpActionResult GetTurn(HttpRequestMessage request, int serviceId, string latitude,string longitude,string isDriving)
         {
             try
             {
-                return Ok(FindOptionalTurns.GetPossibleBusinessWithHour(serviceId, latitude, longitude,bool.Parse(isDriving)));
+                string access_token = request.Headers.Authorization.ToString();
+                int custId = Token.GetCustIdFromToken(access_token);
+                return Ok(FindOptionalTurns.GetPossibleBusinessWithHour(serviceId, latitude, longitude,bool.Parse(isDriving),custId));
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return BadRequest();
+                return BadRequest(ex.Message);
             }
         }
 

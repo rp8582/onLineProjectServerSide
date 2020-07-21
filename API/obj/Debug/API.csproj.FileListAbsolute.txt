@@ -400,3 +400,11 @@ D:\פרויקט\ServerSideApplication\API\bin\Microsoft.IdentityModel.Tokens.xml
 D:\פרויקט\ServerSideApplication\API\bin\System.IdentityModel.Tokens.Jwt.xml
 D:\פרויקט\ServerSideApplication\API\bin\Microsoft.IdentityModel.Logging.xml
 D:\פרויקט\ServerSideApplication\API\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+F:\פרויקט\ServerSideApplication\API\bin\Microsoft.IdentityModel.Tokens.dll
+F:\פרויקט\ServerSideApplication\API\bin\System.IdentityModel.Tokens.Jwt.dll
+F:\פרויקט\ServerSideApplication\API\bin\Microsoft.IdentityModel.Logging.dll
+F:\פרויקט\ServerSideApplication\API\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\פרויקט\ServerSideApplication\API\bin\Microsoft.IdentityModel.Tokens.xml
+F:\פרויקט\ServerSideApplication\API\bin\System.IdentityModel.Tokens.Jwt.xml
+F:\פרויקט\ServerSideApplication\API\bin\Microsoft.IdentityModel.Logging.xml
+F:\פרויקט\ServerSideApplication\API\bin\Microsoft.IdentityModel.JsonWebTokens.xml

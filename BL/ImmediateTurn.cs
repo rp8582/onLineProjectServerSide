@@ -59,14 +59,14 @@ namespace BL
             int index = 0, numOfStandbyTime = 0;
             timeToLookFor = activityTime.StartTime.Add(ts);
             line = line.Where(t => t.estimatedHour.TimeOfDay >= timeToLookFor).ToList();
-            if (line.Count() == 0)
+            if (line.Count() == 0 && timeToLookFor < activityTime.EndTime)
                 //todoever: לבדוק חוקיות עסקים -כלומר שהם קימים באמת
                 return timeToLookFor;
             ts = TimeSpan.FromMinutes(durationOfService);
             for (hour = timeToLookFor; numOfStandbyTime < maxStandbyTime || hour < activityTime.EndTime; hour = hour.Add(ts), numOfStandbyTime++)
             {
                 //todoever: לבדוק גם מקרים של מרווחי זמן הקטנים מזמן השירות- להתייחס לקביעת תור עם אפשרות לכל זמן ולא דווקא בזמנים קבועים
-                if(TurnBL.IsAvailableHour(ref index , activityTime.NumOfWorkers , hour.Add(ts) , line))
+                if (TurnBL.IsAvailableHour(ref index, activityTime.NumOfWorkers, hour.Add(ts), line))
                     return hour;
                 index++;
             }
@@ -115,9 +115,10 @@ namespace BL
         {
             List<customersInLine> line = new List<customersInLine>();
             //todoever: ליצור אינם של סטטוס
-            line = TurnDal.GetLineByCustomer(turn.CustId).Where(l => l.statusTurn == 3 || l.statusTurn == 4).ToList();
-            customersInLine newTurn = new customersInLine();
-            newTurn = line.FirstOrDefault(l => l.TurnId == turn.TurnId);
+            //todo: ???יותר נכון לחלץ את הלקוח לפי הטוקן
+            customersInLine newTurn = TurnDal.GetTurnByTurnId(turn.TurnId);
+            line = TurnDal.GetLineByCustomer(newTurn.custId).Where(l => l.statusTurn == 3 || l.statusTurn == 4).ToList();
+            var x=line.Remove(line.First(t=>t.TurnId==turn.TurnId));
             if (newTurn.statusTurn == 4)
                 pushTurns(TurnDal.GetLinePerBusiness(newTurn.activityTime.serviceId), newTurn.estimatedHour.TimeOfDay, ActivityTimeConverters.GetActivityTimeDTO(newTurn.activityTime));
             newTurn.statusTurn = 2;
@@ -125,9 +126,8 @@ namespace BL
             newTurn.verificationCode = verificationCode;
             newTurn.preAlert = turn.PreAlert;
             TurnDal.UpdateTurn(newTurn);
-            line.Remove(newTurn);
             if (line.Count() > 0)
-                line.ForEach(a => TurnDal.DeleteTurn(a));
+                line.ForEach(a => TurnDal.DeleteTurn(a.TurnId));
             return verificationCode;
         }
 
@@ -138,9 +138,12 @@ namespace BL
         /// </summary>
         /// <param name="turn"></param>
         /// <returns>turn id</returns>
-        public static int MakeTemporaryTurn(TurnInBusinessDTO turn, bool pushFlag)
+        public static int MakeTemporaryTurn(TurnInBusinessDTO turn, bool pushFlag, int custId)
         {
             ActivityTimeDTO activityTime = ActivityTimeBL.GetActivityTime(turn.EstimatedHour.Value, turn.ServiceId);
+            //todo:I'm not sure that this has to be here
+            if (activityTime == null)
+                throw new Exception("אין משמרת פעילה כרגע");
             //todoever: להחליף בהמשך לאינדקסים
             try
             {
@@ -150,8 +153,7 @@ namespace BL
                 CustomerInLineDTO temporaryTurn = new CustomerInLineDTO()
                 {
                     ActivityTimeId = activityTime.ActivityTimeId,
-                    //todo:  token לבצע חילוץ של 
-                    CustId = 2,
+                    CustId = custId,
                     EnterHour = TimeSpan.FromMinutes(turn.Duration).Add(DateTime.Now.TimeOfDay),
                     EstimatedHour = DateTime.Today.Add(turn.EstimatedHour.Value),
 

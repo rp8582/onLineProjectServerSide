@@ -57,10 +57,11 @@ namespace BL.manager
 
         public IEnumerable<Claim> GetTokenClaims(string token)
         {
+            token = token.Substring(token.IndexOf(' ')+1);
             if (string.IsNullOrEmpty(token))
                 throw new ArgumentException("Given token is null or empty");
 
-            TokenValidationParameters tokenValidationParameters = new TokenValidationParameters();
+            TokenValidationParameters tokenValidationParameters = GetTokenValidationParameters();
             JwtSecurityTokenHandler jwtSecurityTokenHandler = new JwtSecurityTokenHandler();
             try
             {
@@ -85,7 +86,7 @@ namespace BL.manager
                 ClaimsPrincipal tokenValid = jwtSecurityTokenHandler.ValidateToken(token, tokenValidationParameters, out SecurityToken validateToken);
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }

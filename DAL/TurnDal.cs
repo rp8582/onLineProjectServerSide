@@ -30,7 +30,7 @@ namespace DAL
             {
                 using(onLineEntities1 entities = new onLineEntities1())
                 {
-                    return entities.customersInLines.Where(a => a.custId == custId && a.ActualHour == null).ToList();
+                    return entities.customersInLines.Where(a => a.custId == custId && a.ActualHour == new TimeSpan()).ToList();
                 }
             }
             catch(Exception)
@@ -38,6 +38,21 @@ namespace DAL
                 throw;
             }
 
+        }
+
+        public static customersInLine GetTurnByTurnId(int turnId)
+        {
+            try
+            {
+                using (onLineEntities1 entities1 = new onLineEntities1())
+                {
+                    return entities1.customersInLines.First(t => t.TurnId == turnId);
+                }
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         public static int AddAppointment(customersInLine turn)
@@ -90,7 +105,7 @@ namespace DAL
                     turn.statusTurn = turnToUpdate.statusTurn;
                     turn.verificationCode = turnToUpdate.verificationCode;
 
-                    entities1.Entry(turnToUpdate).State = EntityState.Modified;
+                   // entities1.Entry(turnToUpdate).State = EntityState.Modified;
                     entities1.SaveChanges();
                 }
             }
@@ -100,13 +115,13 @@ namespace DAL
             }
         }
 
-        public static void DeleteTurn(customersInLine turn)
+        public static void DeleteTurn(int turnId)
         {
             try
             {
                 using(onLineEntities1 entities1 = new onLineEntities1())
                 {
-                    entities1.customersInLines.Remove(turn);
+                    entities1.customersInLines.Remove(entities1.customersInLines.FirstOrDefault(t => t.TurnId == turnId));
                     entities1.SaveChanges();
                 }
             }
