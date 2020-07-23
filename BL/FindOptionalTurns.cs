@@ -38,6 +38,7 @@ namespace BL
             servicesToReturn.AddRange(services.Where(s => s.Duration == services.Min(d => d.Duration)));
 
             if (servicesToReturn.Count == 0)
+                //todo: נופל כאן בקטגוריות
                 throw new Exception("כרגע אין שירותים פעילים");
             servicesToReturn.ForEach(s => s.TurnId = ImmediateTurn.MakeTemporaryTurn(s, pushFlag, custId));
 
@@ -57,8 +58,8 @@ namespace BL
 
             try
             {
+                if(service.EstimatedHour!=new TimeSpan())
                 service.TurnId = ImmediateTurn.MakeTemporaryTurn(service, pushFlag, custId);
-
             }
             catch (Exception ex)
             {

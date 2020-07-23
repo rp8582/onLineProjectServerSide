@@ -53,7 +53,6 @@ F:\פרויקט\ServerSideApplication\DAL\bin\Debug\EntityFramework.dll
 F:\פרויקט\ServerSideApplication\DAL\bin\Debug\EntityFramework.SqlServer.dll
 F:\פרויקט\ServerSideApplication\DAL\bin\Debug\EntityFramework.xml
 F:\פרויקט\ServerSideApplication\DAL\bin\Debug\EntityFramework.SqlServer.xml
-F:\פרויקט\ServerSideApplication\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
 F:\פרויקט\ServerSideApplication\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 F:\פרויקט\ServerSideApplication\DAL\obj\Debug\DAL.csproj.CopyComplete
 F:\פרויקט\ServerSideApplication\DAL\obj\Debug\DAL.dll
@@ -70,3 +69,15 @@ D:\פרויקט\ServerSideApplication\DAL\obj\Debug\DAL.csproj.CoreCompileInputs
 D:\פרויקט\ServerSideApplication\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\פרויקט\ServerSideApplication\DAL\obj\Debug\DAL.dll
 D:\פרויקט\ServerSideApplication\DAL\obj\Debug\DAL.pdb
+C:\Users\user1\Documents\שנה-ב\פרויקט\serverSideApplication\onLineProjectServerSide\DAL\bin\Debug\DAL.dll.config
+C:\Users\user1\Documents\שנה-ב\פרויקט\serverSideApplication\onLineProjectServerSide\DAL\bin\Debug\DAL.dll
+C:\Users\user1\Documents\שנה-ב\פרויקט\serverSideApplication\onLineProjectServerSide\DAL\bin\Debug\DAL.pdb
+C:\Users\user1\Documents\שנה-ב\פרויקט\serverSideApplication\onLineProjectServerSide\DAL\bin\Debug\EntityFramework.dll
+C:\Users\user1\Documents\שנה-ב\פרויקט\serverSideApplication\onLineProjectServerSide\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user1\Documents\שנה-ב\פרויקט\serverSideApplication\onLineProjectServerSide\DAL\bin\Debug\EntityFramework.xml
+C:\Users\user1\Documents\שנה-ב\פרויקט\serverSideApplication\onLineProjectServerSide\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user1\Documents\שנה-ב\פרויקט\serverSideApplication\onLineProjectServerSide\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\user1\Documents\שנה-ב\פרויקט\serverSideApplication\onLineProjectServerSide\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\user1\Documents\שנה-ב\פרויקט\serverSideApplication\onLineProjectServerSide\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\user1\Documents\שנה-ב\פרויקט\serverSideApplication\onLineProjectServerSide\DAL\obj\Debug\DAL.dll
+C:\Users\user1\Documents\שנה-ב\פרויקט\serverSideApplication\onLineProjectServerSide\DAL\obj\Debug\DAL.pdb

@@ -10,26 +10,23 @@ namespace BL
 {
     public class MakeAppointment
     {
-
         public static void BookAppointment(TurnDetailsDTO appointment)
         {
-            ActivityTimeDTO activityTime = ActivityTimeBL.GetActivityTime(appointment.EstimatedHour.TimeOfDay , appointment.ServiceId);
+
+            ActivityTimeDTO activityTime = ActivityTimeBL.GetActivityTime(appointment.EstimatedHour.TimeOfDay, appointment.ServiceId);
+            
             customersInLine turn = new customersInLine()
             {
-                activityTimeId = activityTime.ActivityTimeId,
-                custId=appointment.CustId,
-                estimatedHour =appointment.EstimatedHour,
+                activityTimeId =activityTime.ActivityTimeId ,
+                custId = appointment.CustId,
+
+                estimatedHour = appointment.EstimatedHour,
                 statusTurn=1,
-                
+                enterHour=ConfigureHour(appointment.EstimatedHour,activityTime)
+
             };
         }
-        //todo: ?למצוא שם מתאים יותר
-        public static TimeSpan ConsiderHour(DateTime dateTime, ActivityTimeDTO activityTime)
-        {
-            //מה משך זמן ארוך יותר
-            //todo: change in database: avgNumOfWaitingPeople-avgDuration
-            //
-        }
+
 
         public static List<int> GetOptionalDaysPerService(int serviceId)
         {
@@ -69,6 +66,28 @@ namespace BL
             }
             return optionalHours;
 
+        }
+        /// <summary>
+        /// פונקציה המחשבת את השעה עבור תור הנקבע מראש ומטרתה לחסוך המתנה בזמני עומס  
+        /// </summary>
+        /// <param name="date"></param>
+        /// <param name="activityTime"></param>
+        /// <returns>שעה לוגית  </returns>
+        public static TimeSpan ConfigureHour(DateTime date,ActivityTimeDTO activityTime)
+        {
+            TimeSpan  logicHour= new TimeSpan();
+            //todo: לקבוע את המשתנה בהתאם לאמינות-לסטית תקן
+            int numOfIgnoreServiceDuration = 3;
+            //
+            //todo:לשנות את השם בדטהביס activityTime.AverageNumOfWaitingPeople
+            int numOfSub = (int)(activityTime.AverageNumOfWaitingPeople.Value / activityTime.ActualDurationOfService - numOfIgnoreServiceDuration);
+
+            logicHour = date.TimeOfDay.Subtract(TimeSpan.FromMinutes(activityTime.ActualDurationOfService.Value * numOfSub));
+            if (logicHour > activityTime.StartTime)
+                return logicHour;
+            else
+                return activityTime.StartTime;
+ 
         }
 
     }
