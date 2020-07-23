@@ -106,11 +106,6 @@ namespace BL
 
 
 
-        private static string createVerificationCode(customersInLine turn)
-        {
-            string code = "" + turn.TurnId + turn.custId;
-            return code;
-        }
 
 
 
@@ -118,14 +113,14 @@ namespace BL
         {
             List<customersInLine> line = new List<customersInLine>();
 
-            //todoever: ליצור אינם של סטטוס
+          
             customersInLine newTurn = TurnDal.GetTurnByTurnId(turn.TurnId);
             line = TurnDal.GetLineByCustomer(newTurn.custId).Where(l => l.statusTurn ==(int) eStatus.TEMPORARY || l.statusTurn ==(int) eStatus.TEMPORARY_WITH_PUSH).ToList();
             var x=line.Remove(line.First(t=>t.TurnId==turn.TurnId));
             if (newTurn.statusTurn == (int)eStatus.TEMPORARY_WITH_PUSH)
                 pushTurns(TurnDal.GetLinePerBusiness(newTurn.activityTime.serviceId), newTurn.estimatedHour.TimeOfDay, ActivityTimeConverters.GetActivityTimeDTO(newTurn.activityTime));
             newTurn.statusTurn = (int)eStatus.IMMEDIATELY;
-            string verificationCode = createVerificationCode(newTurn);
+            string verificationCode =TurnBL.CreateVerificationCode(newTurn);
             newTurn.verificationCode = verificationCode;
             newTurn.preAlert = turn.PreAlert;
             TurnDal.UpdateTurn(newTurn);

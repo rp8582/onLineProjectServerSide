@@ -11,8 +11,10 @@ namespace DAL
         public static List<customersInLine> GetTurnToCust(int custId)
         {
             using (onLineEntities1 entities1 = new onLineEntities1())
+
             {
-                return entities1.customersInLines.Include(a => a.activityTime).Include(a=>a.activityTime.service).Include("activityTime.service.business").Where(t => t.custId == custId&&t.ActualHour==new TimeSpan()).ToList();
+               return   entities1.customersInLines.Include(a => a.activityTime).Include(a => a.activityTime.service).Include("activityTime.service.business").Where(t => t.custId == custId && t.ActualHour == new TimeSpan()).ToList();
+               
             }
             //x => x.Quotes.Select(q => q.QuoteItems)
         }

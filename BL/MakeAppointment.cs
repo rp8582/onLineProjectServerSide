@@ -13,7 +13,7 @@ namespace BL
 
         //todo: וכל מה שנגזר מהשינוי
 
-        public static void BookAppointment(TurnDetailsDTO appointment)
+        public static string BookAppointment(TurnDetailsDTO appointment)
         {
 
             try
@@ -30,8 +30,11 @@ namespace BL
                     statusTurn = 1,
                     enterHour = ConfigureHour(appointment.EstimatedHour, activityTime)
                 };
-                TurnDal.AddAppointment(turn);
-
+                turn.TurnId= TurnDal.AddAppointment(turn);
+                string verificationCode =TurnBL.CreateVerificationCode(turn);
+                turn.verificationCode = verificationCode;
+                TurnDal.UpdateTurn(turn);
+                return verificationCode;
             }
             catch (Exception)
             {

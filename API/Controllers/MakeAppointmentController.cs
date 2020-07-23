@@ -53,8 +53,8 @@ namespace API.Controllers
             appointment.CustId = custId;
             try
             {
-               MakeAppointment.BookAppointment(appointment);
-                return Ok();
+               
+                return Ok(MakeAppointment.BookAppointment(appointment));
             }
             catch
             {

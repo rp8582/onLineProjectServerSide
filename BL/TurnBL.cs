@@ -44,6 +44,11 @@ namespace BL
         {
             TurnDal.DeleteTurn(turnId);
         }
+    
+    public static string CreateVerificationCode(customersInLine turn)
+    {
+        string code = "" + turn.TurnId + turn.custId;
+        return code;
     }
-
+}
 }

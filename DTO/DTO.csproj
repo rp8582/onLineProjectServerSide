@@ -43,7 +43,6 @@
   <ItemGroup>
     <Compile Include="ActivityTimeDTO.cs" />
     <Compile Include="BusinessDTO.cs" />
-    <Compile Include="DateDTO.cs" />
     <Compile Include="TurnInBusinessDTO.cs" />
     <Compile Include="CategoryDTO.cs" />
     <Compile Include="CustomerDTO.cs" />

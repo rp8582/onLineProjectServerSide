@@ -1,0 +1,6 @@
+C:\Users\user1\Documents\שנה-ב\פרויקט\onLineProjectServerSide\DTO\bin\Debug\DTO.dll
+C:\Users\user1\Documents\שנה-ב\פרויקט\onLineProjectServerSide\DTO\bin\Debug\DTO.pdb
+C:\Users\user1\Documents\שנה-ב\פרויקט\onLineProjectServerSide\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+C:\Users\user1\Documents\שנה-ב\פרויקט\onLineProjectServerSide\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\user1\Documents\שנה-ב\פרויקט\onLineProjectServerSide\DTO\obj\Debug\DTO.dll
+C:\Users\user1\Documents\שנה-ב\פרויקט\onLineProjectServerSide\DTO\obj\Debug\DTO.pdb

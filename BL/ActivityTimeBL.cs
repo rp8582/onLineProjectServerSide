@@ -16,7 +16,7 @@ namespace BL
         /// <param name="time">שעה</param>
         /// <param name="serviceId">קוד שירות</param>
         /// <returns>קוד משמרת </returns>
-        //todo: לעשות את הפונקציה יותר גנרית שתתאים גם ל
+        
 
         public static ActivityTimeDTO GetActivityTime(DateTime time, int serviceId)
         {
