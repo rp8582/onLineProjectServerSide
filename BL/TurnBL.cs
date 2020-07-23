@@ -11,7 +11,11 @@ namespace BL
     {
         public static bool IsAvailableHour(ref int index, int numOfWorkers, TimeSpan hour, List<customersInLine> line)
         {
+
             if (index >= line.Count() || line[index].statusTurn==1 && line[index].enterHour >= hour || line[index].statusTurn == 2 && line[index].estimatedHour.TimeOfDay >= hour)
+
+            if (index >= line.Count() || line[index].estimatedHour.TimeOfDay >= hour&&line[index].statusTurn==(int)eStatus.IMMEDIATELY || line[index].enterHour >= hour && line[index].statusTurn == (int)eStatus.ADVANCE)
+
             {
                 return true;
             }
@@ -19,7 +23,11 @@ namespace BL
                 // בודק תור פנוי גם לפי מספר הקופות
             {
                 int countTurnsForSameHour = 0;
+
                 while (index < line.Count() &&( line[index].statusTurn == 1 && line[index].enterHour == hour || line[index].statusTurn == 2 && line[index].estimatedHour.TimeOfDay == hour))
+
+                while (index < line.Count() && (line[index].estimatedHour.TimeOfDay >= hour && line[index].statusTurn == (int)eStatus.IMMEDIATELY || line[index].enterHour >= hour && line[index].statusTurn == (int)eStatus.ADVANCE))
+
                 {
                     index++;
                     countTurnsForSameHour++;
@@ -31,7 +39,7 @@ namespace BL
             return false;
         }
 
-        //todo:לאיזה מחלקה מתאימה הפונקציה
+
         public static void DeleteTurn(int turnId)
         {
             TurnDal.DeleteTurn(turnId);

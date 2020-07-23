@@ -10,26 +10,42 @@ namespace BL
 {
     public class MakeAppointment
     {
+
         //todo: וכל מה שנגזר מהשינוי
+
         public static void BookAppointment(TurnDetailsDTO appointment)
         {
-            ActivityTimeDTO activityTime = ActivityTimeBL.GetActivityTime(appointment.EstimatedHour.TimeOfDay, appointment.ServiceId);
 
-            customersInLine turn = new customersInLine()
+            try
             {
-                activityTimeId = activityTime.ActivityTimeId,
-                custId = appointment.CustId,
+                ActivityTimeDTO activityTime = ActivityTimeBL.GetActivityTime(appointment.EstimatedHour, appointment.ServiceId);
 
-                estimatedHour = appointment.EstimatedHour,
-                statusTurn = 1,
-                enterHour = ConfigureHour(appointment.EstimatedHour, activityTime)
-            };
+                customersInLine turn = new customersInLine()
+                {
+                    activityTimeId = activityTime.ActivityTimeId,
+                    custId = appointment.CustId,
 
+                    estimatedHour = appointment.EstimatedHour,
+
+                    statusTurn = 1,
+                    enterHour = ConfigureHour(appointment.EstimatedHour, activityTime)
+                };
+                TurnDal.AddAppointment(turn);
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            
         }
 
 
 
-        public static List<DateTime> GetOptionalDaysPerService(int serviceId)
+
+        public static List<DateTime> GetOptionalDaysPerService(int serviceId)       
         {
             int day = (int)DateTime.Today.DayOfWeek + 1;
             DateTime date = DateTime.Now;
@@ -83,11 +99,14 @@ namespace BL
         /// <returns>שעה לוגית  </returns>
         public static TimeSpan ConfigureHour(DateTime date, ActivityTimeDTO activityTime)
         {
+            if (activityTime.AverageNumOfWaitingPeople == null)
+                return date.TimeOfDay;
             TimeSpan logicHour = new TimeSpan();
             //todo: לקבוע את המשתנה בהתאם לאמינות-לסטית תקן
             int numOfIgnoreServiceDuration = 3;
             //
             //todo:לשנות את השם בדטהביס activityTime.AverageNumOfWaitingPeople
+
             int numOfSub = (int)(activityTime.AverageNumOfWaitingPeople.Value / activityTime.ActualDurationOfService - numOfIgnoreServiceDuration);
 
             logicHour = date.TimeOfDay.Subtract(TimeSpan.FromMinutes(activityTime.ActualDurationOfService.Value * numOfSub));

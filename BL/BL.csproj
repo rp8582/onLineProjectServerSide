@@ -64,6 +64,7 @@
     <Compile Include="converters\ServiceConverters.cs" />
     <Compile Include="converters\UnusualConverters.cs" />
     <Compile Include="CustInLineBL.cs" />
+    <Compile Include="eStatus.cs" />
     <Compile Include="FindOptionalTurns.cs" />
     <Compile Include="ImmediateTurn.cs" />
     <Compile Include="MakeAppointment.cs" />

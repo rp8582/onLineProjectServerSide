@@ -16,14 +16,15 @@ namespace BL
         /// <param name="time">שעה</param>
         /// <param name="serviceId">קוד שירות</param>
         /// <returns>קוד משמרת </returns>
-        //todo: לעשות את הפונקציה יותר גנרית שתתאים גם לתור מראש
-        public static ActivityTimeDTO GetActivityTime(TimeSpan time, int serviceId)
+        //todo: לעשות את הפונקציה יותר גנרית שתתאים גם ל
+
+        public static ActivityTimeDTO GetActivityTime(DateTime time, int serviceId)
         {
             List<ActivityTimeDTO> activityTimes = new List<ActivityTimeDTO>();
             activityTimes = converters.ActivityTimeConverters.GetListActivityTimesDTO(ActivityTimeDal.GetActivityTimes(serviceId));
-            ActivityTimeDTO activityTime = activityTimes.FirstOrDefault(a => a.DayInWeek ==( (int)DateTime.Now.DayOfWeek+1) && a.StartTime <= time && a.EndTime > time && a.StartDate <= DateTime.Now &&(a.EndDate==null|| a.EndDate >= DateTime.Now));
+            ActivityTimeDTO activityTime = activityTimes.FirstOrDefault(a => a.DayInWeek ==( (int)time.DayOfWeek+1) && a.StartTime <= time.TimeOfDay && a.EndTime > time.TimeOfDay && a.StartDate <= time &&(a.EndDate==null|| a.EndDate >= time));
             if (activityTime == null)
-                activityTime = ActivityTimeBL.GetNearestActivityTime(time, serviceId);
+                activityTime = ActivityTimeBL.GetNearestActivityTime(time.TimeOfDay, serviceId);
             return activityTime;
             
         }
@@ -36,10 +37,6 @@ namespace BL
             if (activityTimes.Count() == 0)
                 return null;
             return activityTimes[0];
-
-
-
-
         }
     }
 }

@@ -12,6 +12,7 @@ namespace API.Controllers
 {
     [EnableCors("*", "*", "*")]
     [RoutePrefix("appointment")]
+
     public class MakeAppointmentController : ApiController
     {
         //get business
@@ -34,7 +35,7 @@ namespace API.Controllers
         {
             try
             {
-              //  day = day.Remove(day.IndexOf('T'));
+              
                 return Ok(MakeAppointment.GetOptionalHoursPerDay(int.Parse(serviceId) ,(int) (DateTime.Parse(day).DayOfWeek)+1));
             }
             catch
@@ -42,10 +43,14 @@ namespace API.Controllers
                 return BadRequest();
             }
         }
+
         [HttpPost]
         [Route("ConfirmTurn")]
-        public IHttpActionResult BookAppointment([FromBody]TurnDetailsDTO appointment)
-        {//todo:
+        public IHttpActionResult BookAppointment(HttpRequestMessage request,[FromBody]TurnDetailsDTO appointment)
+        {
+            String access_token = request.Headers.Authorization.ToString();
+            int custId = Token.GetCustIdFromToken(access_token);
+            appointment.CustId = custId;
             try
             {
                MakeAppointment.BookAppointment(appointment);

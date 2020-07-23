@@ -10,6 +10,7 @@ namespace BL
     {
         public static List<DTO.CategoryDTO> GetCategories()
         {
+
             //toask: timer
             try
             {
