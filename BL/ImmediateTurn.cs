@@ -13,7 +13,7 @@ namespace BL
     public class ImmediateTurn
     {
         //toask: סטטי או מופעים של המחלקות
-        //toask: האם צריך להתיחס לדינאמיות של התור ולכן כל פעם לשלוף את הנתונים מהדטה
+        
         /// <summary>
         /// push the turns till the end of the activity time or stop if an empty time was found
         /// </summary>
@@ -25,7 +25,7 @@ namespace BL
         {
             TimeSpan ts = TimeSpan.FromMinutes((double)activityTime.ActualDurationOfService);
             int pushedTurnsCnt = 0;
-            //todo: ליצור רשימה רק עבור אלו שהשתנו עבור היעלות האם יש ענין
+           
             for (int i = 0; i < line.Count(); i++)
             {
                 if (line[i].estimatedHour.TimeOfDay >= time && line[i].estimatedHour.TimeOfDay < time.Add(ts))
@@ -54,7 +54,7 @@ namespace BL
             int maxStandbyTime = 3;
             int maxPushedTimes = 2;
             TimeSpan hour;
-            //toask: מה זה -fromminutes
+            
             TimeSpan ts = TimeSpan.FromMinutes(durationOfService * totalPassedShifts);
             int index = 0, numOfStandbyTime = 0;
             timeToLookFor = activityTime.StartTime.Add(ts);
@@ -115,7 +115,7 @@ namespace BL
         {
             List<customersInLine> line = new List<customersInLine>();
             //todoever: ליצור אינם של סטטוס
-            //todo: ???יותר נכון לחלץ את הלקוח לפי הטוקן
+       
             customersInLine newTurn = TurnDal.GetTurnByTurnId(turn.TurnId);
             line = TurnDal.GetLineByCustomer(newTurn.custId).Where(l => l.statusTurn == 3 || l.statusTurn == 4).ToList();
             var x=line.Remove(line.First(t=>t.TurnId==turn.TurnId));
@@ -141,7 +141,6 @@ namespace BL
         public static int MakeTemporaryTurn(TurnInBusinessDTO turn, bool pushFlag, int custId)
         {
             ActivityTimeDTO activityTime = ActivityTimeBL.GetActivityTime(turn.EstimatedHour.Value, turn.ServiceId);
-            //todo:I'm not sure that this has to be here
             if (activityTime == null)
                 throw new Exception("אין משמרת פעילה כרגע");
             //todoever: להחליף בהמשך לאינדקסים

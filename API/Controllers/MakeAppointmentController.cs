@@ -34,19 +34,21 @@ namespace API.Controllers
         {
             try
             {
-                return Ok(MakeAppointment.GetOptionalHoursPerDay(int.Parse(serviceId) , int.Parse(day)));
+              //  day = day.Remove(day.IndexOf('T'));
+                return Ok(MakeAppointment.GetOptionalHoursPerDay(int.Parse(serviceId) ,(int) (DateTime.Parse(day).DayOfWeek)+1));
             }
             catch
             {
                 return BadRequest();
             }
         }
-
-        public IHttpActionResult BookAppointment(TurnDetailsDTO appointment )
+        [HttpPost]
+        [Route("ConfirmTurn")]
+        public IHttpActionResult BookAppointment([FromBody]TurnDetailsDTO appointment)
         {//todo:
             try
             {
-                MakeAppointment.BookAppointment(appointment);
+               MakeAppointment.BookAppointment(appointment);
                 return Ok();
             }
             catch

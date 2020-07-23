@@ -10,8 +10,9 @@ using System.Web.Http.Cors;
 namespace API.Controllers
 {
     [EnableCors("*", "*", "*")]
-    public class BusinessController : ApiController
+    public class BusinessesController : ApiController
     {
+        //todo: במקרה של תור מראש צריך לשלוח רק עסקים שיש להם הרשאה להזמנת תור
         public IHttpActionResult GetBusinesses()
         {
             try
