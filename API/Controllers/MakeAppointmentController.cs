@@ -35,7 +35,8 @@ namespace API.Controllers
         {
             try
             {
-                return Ok(MakeAppointment.GetOptionalHoursPerDay(int.Parse(serviceId) , int.Parse(day)));
+              
+                return Ok(MakeAppointment.GetOptionalHoursPerDay(int.Parse(serviceId) ,(int) (DateTime.Parse(day).DayOfWeek)+1));
             }
             catch
             {
@@ -43,12 +44,17 @@ namespace API.Controllers
             }
         }
 
-        public IHttpActionResult BookAppointment(TurnDetailsDTO appointment )
+        [HttpPost]
+        [Route("ConfirmTurn")]
+        public IHttpActionResult BookAppointment(HttpRequestMessage request,[FromBody]TurnDetailsDTO appointment)
         {
+            String access_token = request.Headers.Authorization.ToString();
+            int custId = Token.GetCustIdFromToken(access_token);
+            appointment.CustId = custId;
             try
             {
-                MakeAppointment.BookAppointment(appointment);
-                return Ok();
+               
+                return Ok(MakeAppointment.BookAppointment(appointment));
             }
             catch
             {

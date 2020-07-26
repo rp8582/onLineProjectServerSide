@@ -13,6 +13,9 @@ namespace BL
     public class ImmediateTurn
     {
         //toask: סטטי או מופעים של המחלקות
+
+
+
         /// <summary>
         /// push the turns till the end of the activity time or stop if an empty time was found
         /// </summary>
@@ -24,7 +27,7 @@ namespace BL
         {
             TimeSpan ts = TimeSpan.FromMinutes((double)activityTime.ActualDurationOfService);
             int pushedTurnsCnt = 0;
-            //todo: ליצור רשימה רק עבור אלו שהשתנו עבור היעלות האם יש ענין
+
             for (int i = 0; i < line.Count(); i++)
             {
                 if (line[i].estimatedHour.TimeOfDay >= time && line[i].estimatedHour.TimeOfDay < time.Add(ts))
@@ -61,7 +64,7 @@ namespace BL
                 //todoever: לבדוק חוקיות עסקים -כלומר שהם קימים באמת
                 return timeToLookFor;
             ts = TimeSpan.FromMinutes(durationOfService);
-            for (hour = timeToLookFor; numOfStandbyTime < maxStandbyTime || hour < activityTime.EndTime; hour = hour.Add(ts), numOfStandbyTime++)
+            for (hour = timeToLookFor; numOfStandbyTime < maxStandbyTime && hour < activityTime.EndTime; hour = hour.Add(ts), numOfStandbyTime++)
             {
                 //todoever: לבדוק גם מקרים של מרווחי זמן הקטנים מזמן השירות- להתייחס לקביעת תור עם אפשרות לכל זמן ולא דווקא בזמנים קבועים
                 if (TurnBL.IsAvailableHour(ref index, activityTime.NumOfWorkers, hour.Add(ts), line))
@@ -76,7 +79,7 @@ namespace BL
                 return lookForAvailableTurn(activityTime, ref pushFlag, activityTime.StartTime);
             }
             pushFlag = true;
-            while (line[index].estimatedHour.TimeOfDay == hour && line[index].numOfPushTimes == maxPushedTimes)
+            while (index < line.Count() && line[index].estimatedHour.TimeOfDay == hour && line[index].numOfPushTimes == maxPushedTimes)
             {
                 index++;
                 hour = hour.Add(ts);
@@ -93,7 +96,9 @@ namespace BL
         public static TimeSpan GetOptionalHourPerBusiness(int serviceId, TimeSpan timeToLookFor, ref bool pushFlag)
         {
             //to ask: ... לכתוב את החילוץ פעמיים 
-            ActivityTimeDTO activityTime = ActivityTimeBL.GetActivityTime(timeToLookFor, serviceId);
+            DateTime time = DateTime.Now;
+            time = time.Add(timeToLookFor - time.TimeOfDay);
+            ActivityTimeDTO activityTime = ActivityTimeBL.GetActivityTime(time, serviceId);
             if (activityTime == null)
                 return new TimeSpan();
             return (TimeSpan)lookForAvailableTurn(activityTime, ref pushFlag, timeToLookFor);
@@ -101,24 +106,21 @@ namespace BL
 
 
 
-        private static string createVerificationCode(customersInLine turn)
-        {
-            string code = "" + turn.TurnId + turn.custId;
-            return code;
-        }
 
 
 
         public static string ConfirmImmediateTurn(TurnDetailsDTO turn)
         {
             List<customersInLine> line = new List<customersInLine>();
+
+
             customersInLine newTurn = TurnDal.GetTurnByTurnId(turn.TurnId);
-            line = TurnDal.GetLineByCustomer(newTurn.custId).Where(l => l.statusTurn ==(int) eStatus.TEMPORARY || l.statusTurn ==(int) eStatus.TEMPORARY_WITH_PUSH).ToList();
-            var x=line.Remove(line.First(t=>t.TurnId==turn.TurnId));
+            line = TurnDal.GetLineByCustomer(newTurn.custId).Where(l => l.statusTurn == (int)eStatus.TEMPORARY || l.statusTurn == (int)eStatus.TEMPORARY_WITH_PUSH).ToList();
+            var x = line.Remove(line.First(t => t.TurnId == turn.TurnId));
             if (newTurn.statusTurn == (int)eStatus.TEMPORARY_WITH_PUSH)
                 pushTurns(TurnDal.GetLinePerBusiness(newTurn.activityTime.serviceId), newTurn.estimatedHour.TimeOfDay, ActivityTimeConverters.GetActivityTimeDTO(newTurn.activityTime));
             newTurn.statusTurn = (int)eStatus.IMMEDIATELY;
-            string verificationCode = createVerificationCode(newTurn);
+            string verificationCode = TurnBL.CreateVerificationCode(newTurn);
             newTurn.verificationCode = verificationCode;
             newTurn.preAlert = turn.PreAlert;
             TurnDal.UpdateTurn(newTurn);
@@ -136,12 +138,16 @@ namespace BL
         /// <returns>turn id</returns>
         public static int MakeTemporaryTurn(TurnInBusinessDTO turn, bool pushFlag, int custId)
         {
-            ActivityTimeDTO activityTime = ActivityTimeBL.GetActivityTime(turn.EstimatedHour.Value, turn.ServiceId);
+            DateTime time = DateTime.Now;
+            ActivityTimeDTO activityTime = ActivityTimeBL.GetActivityTime(time.Add(turn.EstimatedHour.Value - time.TimeOfDay), turn.ServiceId);
+
+            if (activityTime == null)
+                throw new Exception("אין משמרת פעילה כרגע");
 
             //todoever: להחליף בהמשך לאינדקסים
             try
             {
-                int status = (int) eStatus.TEMPORARY;
+                int status = (int)eStatus.TEMPORARY;
                 if (pushFlag)
                     status = (int)eStatus.TEMPORARY_WITH_PUSH;
                 CustomerInLineDTO temporaryTurn = new CustomerInLineDTO()

@@ -15,4 +15,5 @@ namespace DTO
         public int ServiceId { get; set; }
         public DateTime EstimatedHour { get; set; }
     }
+
 }

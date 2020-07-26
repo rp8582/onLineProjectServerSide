@@ -15,8 +15,6 @@ namespace API.Controllers
     {
         public IHttpActionResult GetTurnsToCustomer(HttpRequestMessage request)
         {
-
-
             try
             {
                 String access_token = request.Headers.Authorization.ToString();
