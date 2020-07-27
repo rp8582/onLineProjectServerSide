@@ -9,7 +9,7 @@ namespace DAL
 {
     public class TurnDal
     {
-        public static List<customersInLine> GetLinePerBusiness(int activityTimeId)
+        public static List<customersInLine> GetLinePerActivityTime(int activityTimeId)
         {
             try
             {

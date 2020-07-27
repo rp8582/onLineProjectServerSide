@@ -30,11 +30,20 @@ namespace BL
 
             for (int i = 0; i < line.Count(); i++)
             {
-                if (line[i].estimatedHour.TimeOfDay >= time && line[i].estimatedHour.TimeOfDay < time.Add(ts))
+                if ((line[i].statusTurn == (int)eStatus.IMMEDIATELY && line[i].estimatedHour.TimeOfDay >= time && line[i].estimatedHour.TimeOfDay < time.Add(ts)) || (line[i].statusTurn == (int)eStatus.ADVANCE && line[i].enterHour >= time && line[i].enterHour < time.Add(ts)))
                 {
                     pushedTurnsCnt++;
-                    line[i].estimatedHour = line[i].estimatedHour.Add(ts);
-                    time = line[i].estimatedHour.TimeOfDay;
+                    if (line[i].statusTurn == (int)eStatus.IMMEDIATELY)
+                    {
+                        line[i].estimatedHour = line[i].estimatedHour.Add(ts);
+                        time = line[i].estimatedHour.TimeOfDay;
+                    }
+                    else
+                    {
+                        line[i].enterHour = line[i].enterHour.Value.Add(ts);
+                        time = line[i].enterHour.Value;
+                    }
+
                 }
                 else
                     break;
@@ -47,14 +56,14 @@ namespace BL
 
         private static TimeSpan? lookForAvailableTurn(ActivityTimeDTO activityTime, ref bool pushFlag, TimeSpan timeToLookFor)
         {
-            List<customersInLine> line = TurnDal.GetLinePerBusiness(activityTime.ActivityTimeId);
+            List<customersInLine> line = TurnDal.GetLinePerActivityTime(activityTime.ActivityTimeId);
             pushFlag = false;
             double durationOfService = (double)activityTime.ActualDurationOfService;
             //מחשב את ההפרש בין זמן התחלת המשמרת לזמן שקבלנו בפרמטר ע"מ למצוא את הזמן שבו יתחיל לחפש תור 
             int totalPassedShifts = (int)((timeToLookFor.TotalMinutes - activityTime.StartTime.TotalMinutes) / durationOfService) + 1;
             // לקבוע פרמטר של פנוי שיהיה לפי ממוצע זמן ההמתנה
-            int maxStandbyTime = 3;
-            int maxPushedTimes = 2;
+            const int maxStandbyTime = 3;
+            const int maxPushedTimes = 2;
             TimeSpan hour;
             TimeSpan ts = TimeSpan.FromMinutes(durationOfService * totalPassedShifts);
             int index = 0, numOfStandbyTime = 0;
@@ -118,7 +127,7 @@ namespace BL
             line = TurnDal.GetLineByCustomer(newTurn.custId).Where(l => l.statusTurn == (int)eStatus.TEMPORARY || l.statusTurn == (int)eStatus.TEMPORARY_WITH_PUSH).ToList();
             var x = line.Remove(line.First(t => t.TurnId == turn.TurnId));
             if (newTurn.statusTurn == (int)eStatus.TEMPORARY_WITH_PUSH)
-                pushTurns(TurnDal.GetLinePerBusiness(newTurn.activityTime.serviceId), newTurn.estimatedHour.TimeOfDay, ActivityTimeConverters.GetActivityTimeDTO(newTurn.activityTime));
+                pushTurns(TurnDal.GetLinePerActivityTime(newTurn.activityTime.serviceId), newTurn.estimatedHour.TimeOfDay, ActivityTimeConverters.GetActivityTimeDTO(newTurn.activityTime));
             newTurn.statusTurn = (int)eStatus.IMMEDIATELY;
             string verificationCode = TurnBL.CreateVerificationCode(newTurn);
             newTurn.verificationCode = verificationCode;
@@ -162,9 +171,6 @@ namespace BL
                 };
 
                 int turnId = TurnDal.AddAppointment(converters.CustomerInLineConvrters.GetCustomerInLine(temporaryTurn));
-
-
-
                 return turnId;
             }
             catch (Exception)

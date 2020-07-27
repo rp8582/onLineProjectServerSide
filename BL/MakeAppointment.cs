@@ -24,10 +24,9 @@ namespace BL
                 {
                     activityTimeId = activityTime.ActivityTimeId,
                     custId = appointment.CustId,
-
                     estimatedHour = appointment.EstimatedHour,
-
-                    statusTurn = 1,
+                    preAlert=appointment.PreAlert,
+                    statusTurn = (int)eStatus.ADVANCE,
                     enterHour = ConfigureHour(appointment.EstimatedHour, activityTime)
                 };
                 turn.TurnId= TurnDal.AddAppointment(turn);
@@ -71,9 +70,9 @@ namespace BL
             return optionalDays;
         }
 
-        public static List<TimeSpan> GetOptionalHoursPerDay(int serviceId, int day)
+        public static List<TimeSpan> GetOptionalHoursPerDay(int serviceId, DateTime date)
         {
-            List<activityTime> activityTimes = ActivityTimeDal.GetActivityTimesByDay(serviceId, day);
+            List<activityTime> activityTimes = ActivityTimeDal.GetActivityTimesByDay(serviceId,(int) date.DayOfWeek+1);
             List<TimeSpan> optionalHours = new List<TimeSpan>();
             int activityTimeIndex = 0;
             int index = 0;
@@ -81,7 +80,7 @@ namespace BL
             while (activityTimeIndex < activityTimes.Count())
             {
                 activityTime activityTime = activityTimes[activityTimeIndex];
-                List<customersInLine> line = TurnDal.GetLinePerBusiness(activityTime.activityTimeId);
+                List<customersInLine> line = TurnDal.GetLinePerActivityTime(activityTime.activityTimeId);
                 double durationOfService = activityTime.ActualDurationOfService.Value;
                 TimeSpan ts = TimeSpan.FromMinutes(durationOfService);
                 for (TimeSpan hour = activityTime.startTime; hour < activityTime.endTime; hour = hour.Add(ts))
@@ -89,7 +88,7 @@ namespace BL
                     if (TurnBL.IsAvailableHour(ref index, activityTime.numOfWorkers, hour.Add(ts), line))
                     {
                         //todo: לדייק את הבדיקה לפי תאריך ולא רק לפי יום
-                        if (day != (int)DateTime.Now.DayOfWeek + 1 || hour.Add(ts) > DateTime.Now.TimeOfDay)
+                        if (date.DayOfWeek != DateTime.Now.DayOfWeek + 1 || hour.Add(ts) > DateTime.Now.TimeOfDay)
                             optionalHours.Add(hour);
                     }
                     index++;
