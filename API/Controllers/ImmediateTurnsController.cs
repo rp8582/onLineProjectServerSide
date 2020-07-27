@@ -11,7 +11,6 @@ using DTO;
 namespace API.Controllers
 {
     [EnableCors("*", "*", "*")]
-    //[RoutePrefix("api")]
     public class ImmediateTurnsController : ApiController
     {
 
@@ -34,7 +33,7 @@ namespace API.Controllers
         }
       
 
-        [HttpPost]
+        [HttpPut]
         public IHttpActionResult ConfirmTurn([FromBody]TurnDetailsDTO turn)
         {
             try

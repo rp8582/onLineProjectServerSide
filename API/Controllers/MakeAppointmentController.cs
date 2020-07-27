@@ -15,7 +15,6 @@ namespace API.Controllers
 
     public class MakeAppointmentController : ApiController
     {
-        //get business
 
         [Route("optionalDays")]
         public IHttpActionResult GetDaysToService(string serviceId)

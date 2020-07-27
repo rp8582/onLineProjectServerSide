@@ -77,6 +77,7 @@ namespace BL
             List<TimeSpan> optionalHours = new List<TimeSpan>();
             int activityTimeIndex = 0;
             int index = 0;
+            activityTimes.OrderBy(a => a.startTime);
             while (activityTimeIndex < activityTimes.Count())
             {
                 activityTime activityTime = activityTimes[activityTimeIndex];
@@ -86,7 +87,11 @@ namespace BL
                 for (TimeSpan hour = activityTime.startTime; hour < activityTime.endTime; hour = hour.Add(ts))
                 {
                     if (TurnBL.IsAvailableHour(ref index, activityTime.numOfWorkers, hour.Add(ts), line))
-                        optionalHours.Add(hour);
+                    {
+                        //todo: לדייק את הבדיקה לפי תאריך ולא רק לפי יום
+                        if (day != (int)DateTime.Now.DayOfWeek + 1 || hour.Add(ts) > DateTime.Now.TimeOfDay)
+                            optionalHours.Add(hour);
+                    }
                     index++;
                 }
                 activityTimeIndex++;

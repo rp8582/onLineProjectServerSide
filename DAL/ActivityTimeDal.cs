@@ -20,7 +20,7 @@ namespace DAL
         {
             using(onLineEntities1 entities = new onLineEntities1())
             {
-                return entities.activityTimes.Where(a => a.serviceId == serviceId && a.dayInWeek==day).ToList();
+                return entities.activityTimes.Where(a => a.serviceId == serviceId && a.dayInWeek==day&&a.endDate==new DateTime()).ToList();
             }
         }
 

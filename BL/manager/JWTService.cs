@@ -70,8 +70,9 @@ namespace BL.manager
             }
             catch(SecurityTokenExpiredException)
             {
-                //todo: איזשהו לוגין או למחוק את הפניה לפונקציה הזו
-                throw;
+                ClaimsPrincipal tokenValid = jwtSecurityTokenHandler.ValidateToken(token, tokenValidationParameters, out SecurityToken validateToken);
+
+                return tokenValid.Claims;
             }
             catch(Exception ex)
             {
