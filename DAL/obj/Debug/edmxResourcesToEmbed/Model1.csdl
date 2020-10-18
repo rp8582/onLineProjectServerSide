@@ -16,6 +16,8 @@
     <Property Name="ActualDurationOfService" Type="Double" />
     <Property Name="StandardDeviation" Type="Double" />
     <Property Name="averageNumOfWaitingPeople" Type="Double" />
+    <Property Name="avgServiceDuration" Type="Int32" />
+    <Property Name="sampleSize" Type="Int32" />
     <NavigationProperty Name="service" Relationship="Self.FK__activityT__servi__1920BF5C" FromRole="activityTimes" ToRole="services" />
     <NavigationProperty Name="customersInLines" Relationship="Self.FK__customers__activ__22AA2996" FromRole="activityTimes" ToRole="customersInLine" />
     <NavigationProperty Name="unusuals" Relationship="Self.FK__unusuals__activi__1ED998B2" FromRole="activityTimes" ToRole="unusuals" />
@@ -50,6 +52,7 @@
     <Property Name="custName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="latitude" Type="Double" />
     <Property Name="longitude" Type="Double" />
+    <Property Name="firebaseToken" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="customersInLines" Relationship="Self.FK__customers__custI__21B6055D" FromRole="customers" ToRole="customersInLine" />
   </EntityType>
   <EntityType Name="customersInLine">
@@ -66,6 +69,8 @@
     <Property Name="statusTurn" Type="Int32" Nullable="false" />
     <Property Name="verificationCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="numOfPushTimes" Type="Int32" />
+    <Property Name="exitHour" Type="Time" Precision="7" />
+    <Property Name="isActive" Type="Boolean" />
     <NavigationProperty Name="activityTime" Relationship="Self.FK__customers__activ__22AA2996" FromRole="customersInLine" ToRole="activityTimes" />
     <NavigationProperty Name="customer" Relationship="Self.FK__customers__custI__21B6055D" FromRole="customersInLine" ToRole="customers" />
     <NavigationProperty Name="ranges" Relationship="Self.FK__ranges__TurnId__25869641" FromRole="customersInLine" ToRole="ranges" />
@@ -111,11 +116,13 @@
       <PropertyRef Name="unusualId" />
     </Key>
     <Property Name="unusualId" Type="Int32" Nullable="false" />
-    <Property Name="average" Type="Int32" Nullable="false" />
+    <Property Name="average" Type="Double" Nullable="false" />
     <Property Name="activityTimeId" Type="Int32" Nullable="false" />
     <Property Name="startTime" Type="DateTime" Precision="3" />
     <Property Name="endTime" Type="DateTime" Precision="3" />
     <Property Name="StandardDeviation" Type="Double" />
+    <Property Name="kindOfUnusual" Type="Boolean" />
+    <Property Name="isActive" Type="Boolean" />
     <NavigationProperty Name="activityTime" Relationship="Self.FK__unusuals__activi__1ED998B2" FromRole="unusuals" ToRole="activityTimes" />
   </EntityType>
   <Association Name="FK__activityT__servi__1920BF5C">

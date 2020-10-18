@@ -12,8 +12,9 @@ namespace API
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
+            BL.services.NnotificationTimer.StartTimer();
         }
-        /*
+        
         protected void Application_BeginRequest()
         {
             Response.AddHeader("Access-Control-Allow-Origin", "*");
@@ -27,6 +28,6 @@ namespace API
             }
 
 
-        }*/
+        }
     }
 }

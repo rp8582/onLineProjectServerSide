@@ -24,5 +24,13 @@ namespace DAL
             }
         }
 
+        public static activityTime GetActivityTimeById(int activityTimeId)
+        {
+            //todo: implement this function
+            using (onLineEntities1 entities = new onLineEntities1())
+            {
+                return entities.activityTimes.FirstOrDefault(a => a.activityTimeId == activityTimeId);
+            }
+        }
     }
 }

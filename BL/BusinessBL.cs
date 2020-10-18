@@ -14,5 +14,12 @@ namespace BL
         {
             return converters.BusinessConverters.GetListBusinessDTO(BusinessDal.GetBusinesses());
         }
+
+        public static int AddBusiness(BusinessDTO businessToAdd)
+        {
+            int businessId=BusinessDal.AddBusiness(converters.BusinessConverters.GetBusiness(businessToAdd));
+            return businessId;
+            //todo: האם להחזיר למשתמש מידע  זה
+        }
     }
 }

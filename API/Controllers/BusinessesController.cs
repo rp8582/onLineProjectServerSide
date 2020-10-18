@@ -1,4 +1,5 @@
 ﻿using BL;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,5 +25,18 @@ namespace API.Controllers
                 return BadRequest();
             }
         }
+
+        public IHttpActionResult AddBusiness([FromBody]BusinessDTO businessToAdd)
+        {
+            try
+            {
+                return Ok(BusinessBL.AddBusiness(businessToAdd));
+            }
+            catch
+            {
+                return BadRequest();
+            }
+        }
     }
+
 }

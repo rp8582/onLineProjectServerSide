@@ -25,6 +25,7 @@ namespace DAL
         public string custName { get; set; }
         public Nullable<double> latitude { get; set; }
         public Nullable<double> longitude { get; set; }
+        public string firebaseToken { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<customersInLine> customersInLines { get; set; }

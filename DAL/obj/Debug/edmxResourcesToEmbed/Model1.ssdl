@@ -16,6 +16,8 @@
     <Property Name="ActualDurationOfService" Type="float" />
     <Property Name="StandardDeviation" Type="float" />
     <Property Name="averageNumOfWaitingPeople" Type="float" />
+    <Property Name="avgServiceDuration" Type="int" />
+    <Property Name="sampleSize" Type="int" />
   </EntityType>
   <EntityType Name="businesses">
     <Key>
@@ -45,6 +47,7 @@
     <Property Name="custName" Type="nvarchar(max)" Nullable="false" />
     <Property Name="latitude" Type="float" />
     <Property Name="longitude" Type="float" />
+    <Property Name="firebaseToken" Type="varchar(max)" />
   </EntityType>
   <EntityType Name="customersInLine">
     <Key>
@@ -60,6 +63,8 @@
     <Property Name="statusTurn" Type="int" Nullable="false" />
     <Property Name="verificationCode" Type="nvarchar" MaxLength="10" />
     <Property Name="numOfPushTimes" Type="int" />
+    <Property Name="exitHour" Type="time" Precision="7" />
+    <Property Name="isActive" Type="bit" />
   </EntityType>
   <EntityType Name="ranges">
     <Key>
@@ -96,11 +101,13 @@
       <PropertyRef Name="unusualId" />
     </Key>
     <Property Name="unusualId" Type="int" Nullable="false" />
-    <Property Name="average" Type="int" Nullable="false" />
+    <Property Name="average" Type="float" Nullable="false" />
     <Property Name="activityTimeId" Type="int" Nullable="false" />
     <Property Name="startTime" Type="datetime" />
     <Property Name="endTime" Type="datetime" />
     <Property Name="StandardDeviation" Type="float" />
+    <Property Name="kindOfUnusual" Type="bit" />
+    <Property Name="isActive" Type="bit" />
   </EntityType>
   <Association Name="FK__activityT__servi__1920BF5C">
     <End Role="services" Type="Self.services" Multiplicity="1">

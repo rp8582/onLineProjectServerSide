@@ -25,12 +25,12 @@ namespace BL
                     activityTimeId = activityTime.ActivityTimeId,
                     custId = appointment.CustId,
                     estimatedHour = appointment.EstimatedHour,
-                    preAlert=appointment.PreAlert,
+                    preAlert = appointment.PreAlert,
                     statusTurn = (int)eStatus.ADVANCE,
                     enterHour = ConfigureHour(appointment.EstimatedHour, activityTime)
                 };
-                turn.TurnId= TurnDal.AddAppointment(turn);
-                string verificationCode =TurnBL.CreateVerificationCode(turn);
+                turn.TurnId = TurnDal.AddAppointment(turn);
+                string verificationCode = TurnBL.CreateVerificationCode(turn);
                 turn.verificationCode = verificationCode;
                 TurnDal.UpdateTurn(turn);
                 return verificationCode;
@@ -41,13 +41,13 @@ namespace BL
                 throw;
             }
 
-            
+
         }
 
 
 
 
-        public static List<DateTime> GetOptionalDaysPerService(int serviceId)       
+        public static List<DateTime> GetOptionalDaysPerService(int serviceId)
         {
             int day = (int)DateTime.Today.DayOfWeek + 1;
             DateTime date = DateTime.Now;
@@ -72,7 +72,7 @@ namespace BL
 
         public static List<TimeSpan> GetOptionalHoursPerDay(int serviceId, DateTime date)
         {
-            List<activityTime> activityTimes = ActivityTimeDal.GetActivityTimesByDay(serviceId,(int) date.DayOfWeek+1);
+            List<activityTime> activityTimes = ActivityTimeDal.GetActivityTimesByDay(serviceId, (int)date.DayOfWeek + 1);
             List<TimeSpan> optionalHours = new List<TimeSpan>();
             int activityTimeIndex = 0;
             int index = 0;
@@ -87,8 +87,7 @@ namespace BL
                 {
                     if (TurnBL.IsAvailableHour(ref index, activityTime.numOfWorkers, hour.Add(ts), line))
                     {
-                        //todo: לדייק את הבדיקה לפי תאריך ולא רק לפי יום
-                        if (date.DayOfWeek != DateTime.Now.DayOfWeek + 1 || hour.Add(ts) > DateTime.Now.TimeOfDay)
+                        if (date.Day != DateTime.Now.Day && date.Month != DateTime.Now.Month && date.Year != DateTime.Now.Year || hour.Add(ts) > DateTime.Now.TimeOfDay)
                             optionalHours.Add(hour);
                     }
                     index++;

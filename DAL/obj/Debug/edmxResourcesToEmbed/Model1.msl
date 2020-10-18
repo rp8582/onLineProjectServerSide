@@ -16,6 +16,8 @@
           <ScalarProperty Name="ActualDurationOfService" ColumnName="ActualDurationOfService" />
           <ScalarProperty Name="StandardDeviation" ColumnName="StandardDeviation" />
           <ScalarProperty Name="averageNumOfWaitingPeople" ColumnName="averageNumOfWaitingPeople" />
+          <ScalarProperty Name="avgServiceDuration" ColumnName="avgServiceDuration" />
+          <ScalarProperty Name="sampleSize" ColumnName="sampleSize" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -48,6 +50,7 @@
           <ScalarProperty Name="custName" ColumnName="custName" />
           <ScalarProperty Name="latitude" ColumnName="latitude" />
           <ScalarProperty Name="longitude" ColumnName="longitude" />
+          <ScalarProperty Name="firebaseToken" ColumnName="firebaseToken" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -64,6 +67,8 @@
           <ScalarProperty Name="statusTurn" ColumnName="statusTurn" />
           <ScalarProperty Name="verificationCode" ColumnName="verificationCode" />
           <ScalarProperty Name="numOfPushTimes" ColumnName="numOfPushTimes" />
+          <ScalarProperty Name="exitHour" ColumnName="exitHour" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -107,6 +112,8 @@
           <ScalarProperty Name="startTime" ColumnName="startTime" />
           <ScalarProperty Name="endTime" ColumnName="endTime" />
           <ScalarProperty Name="StandardDeviation" ColumnName="StandardDeviation" />
+          <ScalarProperty Name="kindOfUnusual" ColumnName="kindOfUnusual" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
