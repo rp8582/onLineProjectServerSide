@@ -1,0 +1,54 @@
+
+<mat-horizontal-stepper linear #stepper>
+    <mat-step [stepControl]="firstFormGroup" [editable]="isEditable">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>הכנס פרטי עסק</ng-template>
+        <mat-form-field>
+          <mat-label>שם העסק</mat-label>
+          <input matInput formControlName="firstCtrl" placeholder="" required>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>כתובת העסק</mat-label>
+          <input matInput  placeholder="" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>הבא</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" [editable]="isEditable">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>זמני פעילות העסק</ng-template>
+        <mat-form-field>
+          <mat-label> מספר עובדים במשמרת</mat-label>
+          <input matInput type="number" formControlName="secondCtrl" placeholder="" required>
+        </mat-form-field>
+       
+        <mat-form-field appearance="fill">
+          <mat-label>ימי פעילות:</mat-label>
+          <mat-select  [formControl]="days" multiple>
+            <mat-select-trigger>
+              {{days.value ? days.value[0] : ''}}
+              <span *ngIf="days.value?.length > 1" class="example-additional-selection">
+                (+{{days.value.length - 1}} {{days.value?.length === 2 ? 'other' : 'others'}})
+              </span>
+            </mat-select-trigger>
+            <mat-option *ngFor="let day of daysList" [value]="day">{{day}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>הקודם</button>
+          <button mat-button matStepperNext>הבא</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+  

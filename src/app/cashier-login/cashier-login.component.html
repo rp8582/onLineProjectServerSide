@@ -1,0 +1,45 @@
+<mat-card>
+  <mat-card-title>הכנס לעסק</mat-card-title>
+  <mat-card-content>
+    <!--form class="example-form" *ngIf="businesses">
+    <mat-form-field class="example-full-width">
+      <input type="text"
+             placeholder="בחר עסק"
+             aria-label="Number"
+             matInput
+             [formControl]="myControl"
+             [matAutocomplete]="auto">
+      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+        <mat-option *ngFor="let business of filteredbusinesses | async" [value]="business">
+          {{business.BusinessName}}
+        </mat-option>
+      </mat-autocomplete>
+      
+    </mat-form-field>
+    <mat-form-field *ngIf="selectedBusiness" appearance="fill">
+      <mat-label>בחר שירות בעסק</mat-label>
+      <mat-select [(ngModel)]="selectedService" name="service">
+        <mat-option *ngFor="let service of selectedBusiness.Services" [value]="service">
+          {{service.ServiceName}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  <div *ngIf="selectedService"><button  mat-button>הכנס</button></div> 
+  </form-->
+    <input matInput #password type="password" placeholder="הכנס סיסמא" aria-label="Number">
+
+    <button mat-button (click)="CheckPassword(password.value)">אישור</button>
+
+    <div  *ngIf="business">{{business.BusinessName}}</div >
+      <mat-form-field *ngIf="business" appearance="fill">
+        <mat-label>בחר שירות בעסק</mat-label>
+        <mat-select [(ngModel)]="selectedService" name="service">
+          <mat-option *ngFor="let service of business.Services" [value]="service">
+            {{service.ServiceName}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    <div *ngIf="selectedService"><button  mat-button (click)="next()">הכנס</button></div>
+
+  </mat-card-content>
+</mat-card>

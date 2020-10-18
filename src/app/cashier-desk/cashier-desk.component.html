@@ -1,0 +1,35 @@
+<span mat-list-item (click)="sidenav.toggle()"  mat-list-item>פעולות לפקיד</span>
+
+  <mat-sidenav #sidenav >
+   
+
+    <mat-nav-list>
+
+      <a  mat-list-item (click)="getTurn()" (click)="sidenav.toggle()"> קבל תור </a >
+      <a mat-list-item > יצאתי להפסקה </a>
+      <a mat-list-item > הוספת תור חריג</a>
+      <a mat-list-item (click)="sidenav.toggle()"  mat-list-item>Close</a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <!--mat-sidenav-content>
+    <div style="height: 88vh;">
+
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content-->
+
+<mat-card>
+  <mat-card-title> </mat-card-title>
+  <mat-card-content>
+    <div *ngIf="nextTurn">
+      <p> -התור הבא יהיה בשעה :{{nextTurn.EstimatedHour|date:'shortTime'}}</p>
+    </div>
+    
+  <div *ngIf="nextTurn&&acceptFlag"><app-get-turn [turn]="nextTurn" (finishTurn)="completedTurn($event)">
+
+  </app-get-turn></div>  
+  </mat-card-content>
+</mat-card>
+
+  
